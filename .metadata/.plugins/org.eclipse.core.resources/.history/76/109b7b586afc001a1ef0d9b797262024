@@ -1,0 +1,26 @@
+--프레임 워크
+
+Spring
+자바로 만들어진 웹 어플리케이션 프레임워크
+안정적이고 높은 성능이 장점
+
+tomcat
+jsp와 자바 서블릿을 실행할 수 있는 환경을 제공하는 웹서버
+
+MyBatis
+SQL을 맵핑하여 사용할 수 있도록 해주는 프레임워크
+iBatis에서 파생
+
+
+--개발 툴
+Spring STS
+이클립스 기반으로 하여 Spring 프레임워크를 좀 더 쉽게 사용할 수 있도록 도와주는 IDE
+
+spring 사용방법
+
+1. eclipse -> jar lib local에 설치하여 오프라인에서도 사용 가능
+2.		   -> plug in
+ 
+3. STS (Maven이 관리)-> spring 전용 툴
+
+4) intellij (gradle이 관리) // 통합 개발 시스템 (파이썬, R, 자바 프로젝트를 통합시키고 싶을때)
