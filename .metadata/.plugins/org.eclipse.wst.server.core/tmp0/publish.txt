@@ -1,4 +1,4 @@
 #Tomcat publish data
-#Tue Sep 22 12:25:50 KST 2020
+#Wed Sep 23 10:07:35 KST 2020
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\admin\\.m2\\repository\\org\\springframework\\spring-web\\4.2.4.RELEASE\\spring-web-4.2.4.RELEASE.jar=C\:\\sts-bundle\\pivotal-tc-server-developer-3.2.4.SR1\\base-instance\\wtpwebapps\\BoardWeb\\WEB-INF\\lib\\spring-web-4.2.4.RELEASE.jar
 org.eclipse.jst.jee.server\:BoardWeb=C\:\\sts-bundle\\pivotal-tc-server-developer-3.2.4.SR1\\base-instance\\wtpwebapps\\BoardWeb
