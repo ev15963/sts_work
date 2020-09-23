@@ -2,7 +2,7 @@ package com.lsw.biz;
 
 public class TVUser {
 	public static void main(String[] args) {
-		TV tv = new LgTV(); //or new LgTV();
+		TV tv = new SamsungTV();
 		tv.powerOn();
 		tv.volumeUp();
 		tv.volumeDown();
