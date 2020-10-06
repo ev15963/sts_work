@@ -1,6 +1,6 @@
 package com.collection.mapping;
 
-import java.util.Set;
+import java.util.List;
 
 public class CollectionBean {
 
@@ -14,9 +14,12 @@ public class CollectionBean {
 		return addressList;
 	}
 	
-	public void setAddressList(Set<String> addressList) {
+	public void setAddressList(List<String> addressList) {
 		this.addressList = addressList;
 	}
-
+	
+	public List<String> getAddressList() {
+		return addressList;
+	}
 
 }
