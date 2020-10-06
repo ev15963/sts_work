@@ -1,0 +1,19 @@
+package polymorphism.di;
+
+public class TVUser {
+	public static void main(String[] args) {
+		BeanFactory factory = new BeanFactory(); //BeanFactory : samsung or TV 선택하게
+//		TV tv = new SamsungTV();
+		TV tv = (TV)factory.getBean(args[0]);
+		tv.powerOn();
+		tv.volumeUp();
+		tv.volumeDown();
+		tv.powerOff();
+		
+//		TV tv = new LgTV();
+//		tv.turnOn();
+//		tv.soundup();
+//		tv.soundDown();
+//		tv.turnOff();
+	}
+}
