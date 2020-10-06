@@ -8,6 +8,8 @@ public class SamsungTV implements TV{
 		System.out.println("============> SamsungTV 객체 생성");
 	}
 	
+	
+	
 	@Override
 	public void powerOn() {
 		System.out.println("SamsungTV--전원 켠다");
@@ -18,11 +20,14 @@ public class SamsungTV implements TV{
 	}
 	@Override
 	public void volumeUp() {
-		System.out.println("SamsungTV--소리 울린다");
+		speaker=new SonySpeaker();
+		speaker.volumeUp();
 	}
 	@Override
 	public void volumeDown() {
-		System.out.println("SamsungTV--소리 내린다");
+		speaker = new SonySpeaker();
+		speaker.volumeDown();
+//		System.out.println("SamsungTV--소리 내린다");
 	}
 }
 	

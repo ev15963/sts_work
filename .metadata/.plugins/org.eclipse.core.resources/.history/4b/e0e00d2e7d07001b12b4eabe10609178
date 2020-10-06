@@ -1,0 +1,9 @@
+package com.collection.mapping;
+
+public class CollectionBean {
+
+	public CollectionBean() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
