@@ -17,12 +17,12 @@ public class SamsungTV implements TV {
 
 	public void volumeUp() {
 		speaker = new SonySpeaker();
-		speaker.volumeUp();
+		System.out.println("SamsungTV-- 소리울린다");
 	}
 
 	public void volumeDown() {
 		speaker = new SonySpeaker();
-		speaker.volumeDown();
+		System.out.println("SamsungTV-- 소리내린다");
 	}
 	
 }
