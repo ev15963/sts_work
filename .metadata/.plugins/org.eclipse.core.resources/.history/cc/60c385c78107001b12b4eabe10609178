@@ -1,6 +1,7 @@
 package com.collection.mapping;
 
 import java.util.Map;
+import java.util.Set;
 
 public class CollectionBean {
 
@@ -10,7 +11,7 @@ public class CollectionBean {
 		
 	}
 	
-	public Map<String, String> getAddressList() {
+	public Map<String> getAddressList() {
 		return addressList;
 	}
 	

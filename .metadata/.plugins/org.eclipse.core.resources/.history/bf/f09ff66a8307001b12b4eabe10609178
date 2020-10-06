@@ -1,6 +1,6 @@
 package com.collection.mapping;
 
-import java.util.Map;
+import java.util.Set;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -15,19 +15,15 @@ public class CollectionBeanClient {
 		//2. Spring Container로 부터 필요한 객체를 요청(lookup)한다.
 		CollectionBean bean = (CollectionBean) factory.getBean("collectionBean");
 		
-		Map<String, String> addresslist = bean.getAddressList();
+		Set<String> addresslist = bean.getAddressList();
 		
 		//addressList => 서울, 경기
 //						String String
 //							0     1 set에선 순서가 없기 때문에 사라짐
 		
-		//객체를 하나씩 처리하기
-		System.out.println("총 Entry 수 : "+addresslist.size());
-		
-		//객체 찾기
-		System.out.println("역삼동의 전체 주소는?"+addresslist.get("역삼동"));
-		System.out.println("서흥동의 전체 주소는?"+addresslist.get("서흥동"));
-		System.out.println("일산동구의 전체 주소는?"+addresslist.get("일산동구"));
+		for(String address : addresslist) {
+			System.out.println("===>"+address.toString());
+		}
 		
 		//3. Spring Container 종료
 		factory.close();
