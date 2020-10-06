@@ -21,11 +21,11 @@ public class SamsungTV implements TV {
 	}
 
 	public void volumeUp() {
-		speaker.volumeUp();
+		this.speaker.volumeUp();
 	}
 
 	public void volumeDown() {
-		speaker.volumeDown();
+		this.speaker.volumeDown();
 	}
 	
 }
