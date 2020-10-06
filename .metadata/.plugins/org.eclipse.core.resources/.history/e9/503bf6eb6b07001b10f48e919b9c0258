@@ -7,9 +7,9 @@ public class SonySpeaker {
 	}
 
 	public void volumeUp() {
-		System.out.println("SonySpeaker--- ㅅ로 ㅣ울리다ㅇㅇㅅ");
+		System.out.println("SonySpeaker--- ㅅ로 ㅣ울리다ㅇㅇ"ㅅ");
 	}
 	public void volumeDown() {
-		System.out.println("SonySpeaker---");
+		System.out.println("SonySpeaker--- ㅅ소리ㅇㅇ ㅣ울리다ㅇㅇ"ㅅ");
 	}
 }

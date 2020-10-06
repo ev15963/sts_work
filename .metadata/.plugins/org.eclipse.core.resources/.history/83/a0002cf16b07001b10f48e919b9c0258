@@ -10,6 +10,6 @@ public class SonySpeaker {
 		System.out.println("SonySpeaker--- ㅅ로 ㅣ울리다ㅇㅇㅅ");
 	}
 	public void volumeDown() {
-		System.out.println("SonySpeaker---");
+		System.out.println("SonySpeaker--- ㅅdㅇ"ㅅ");
 	}
 }
