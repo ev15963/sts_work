@@ -1,7 +1,9 @@
 package com.collection.mapping;
 
+import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 import org.springframework.context.support.AbstractApplicationContext;
@@ -17,21 +19,20 @@ public class CollectionBeanClient {
 		//2. Spring Container로 부터 필요한 객체를 요청(lookup)한다.
 		CollectionBean bean = (CollectionBean) factory.getBean("collectionBean");
 		
-		Map<String, String> addresslist = bean.getAddressList();
+		Properties addresslist = bean.getAddressList();
 		
 		//addressList => 서울, 경기
 //						String String
 //							0     1 set에선 순서가 없기 때문에 사라짐
 		
-		//객체를 하나씩 처리하기
-		Set<String> keySet = addresslist.keySet(); //key Set 얻기
-		
-		//반복해서 키를 얻어내고 그 키로 값을 Map에서 얻어낸다.
-		Iterator<String> keyIterator = keySet.iterator();
-		while (keyIterator.hasNext()) {
-			String key=keyIterator.next();
-			String value = addresslist.get(key);
-			System.out.println(key + " : " + value);
+		//name 가져오기
+		Enumeration enu = addresslist.propertyNames(); //kerSet() 메소드와 기능이 동일
+		//리턴 타입이 Enumeration라서 Enumeration타입의 변수에 담아줌.  
+
+
+		while (enu.hasMoreElements()) {
+			String ele=(String)enu.nextElement();
+			System.out.println(ele + " : " + addresslist.getProperty(ele));
 		}
 		
 		//3. Spring Container 종료
@@ -39,8 +40,8 @@ public class CollectionBeanClient {
 		
 	
 	}
-	public CollectionBeanClient() {
-		// TODO Auto-generated constructor stub
-	}
+//	public CollectionBeanClient() {
+//		// TODO Auto-generated constructor stub
+//	}
 
 }
