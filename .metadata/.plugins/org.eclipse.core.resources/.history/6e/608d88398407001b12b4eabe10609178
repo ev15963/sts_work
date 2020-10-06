@@ -37,7 +37,7 @@ public class CollectionBeanClient {
 		//3. Spring Container Á¾·á
 		factory.close();
 		
-	
+		/
 	}
 	public CollectionBeanClient() {
 		// TODO Auto-generated constructor stub

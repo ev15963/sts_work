@@ -37,7 +37,13 @@ public class CollectionBeanClient {
 		//3. Spring Container 종료
 		factory.close();
 		
-	
+		//객체 찾기
+		System.out.println("역삼동의 전체 주소는?"+addresslist.get("역삼동"));
+		System.out.println("서흥동의 전체 주소는?"+addresslist.get("서흥동"));
+		System.out.println("일산동구의 전체 주소는?"+addresslist.get("일산동구"));
+		
+		//3. Spring Container 종료
+		factory.close();
 	}
 	public CollectionBeanClient() {
 		// TODO Auto-generated constructor stub

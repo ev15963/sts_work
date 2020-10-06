@@ -1,8 +1,6 @@
 package com.collection.mapping;
 
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -24,20 +22,15 @@ public class CollectionBeanClient {
 //							0     1 set에선 순서가 없기 때문에 사라짐
 		
 		//객체를 하나씩 처리하기
-		Set<String> keySet = addresslist.keySet(); //key Set 얻기
+		System.out.println("총 Entry 수 : "+addresslist.size());
 		
-		//반복해서 키를 얻어내고 그 키로 값을 Map에서 얻어낸다.
-		Iterator<String> keyIterator = keySet.iterator();
-		while (keyIterator.hasNext()) {
-			String key=keyIterator.next();
-			String value = addresslist.get(key);
-			System.out.println(key + " : " + value);
-		}
+		//객체 찾기
+		System.out.println("역삼동의 전체 주소는?"+addresslist.get("역삼동"));
+		System.out.println("서흥동의 전체 주소는?"+addresslist.get("서흥동"));
+		System.out.println("일산동구의 전체 주소는?"+addresslist.get("일산동구"));
 		
 		//3. Spring Container 종료
 		factory.close();
-		
-	
 	}
 	public CollectionBeanClient() {
 		// TODO Auto-generated constructor stub
