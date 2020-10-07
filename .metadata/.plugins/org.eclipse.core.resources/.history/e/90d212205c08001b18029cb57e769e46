@@ -1,0 +1,23 @@
+package com.lsw.biz.board;
+
+import java.sql.Date;
+
+public class BoardVO {
+
+	private int seq;
+	private String title;
+	private String writer;
+	private String content;
+	private Date regDate;
+	private int cnt;
+	
+	public BoardVO() {
+		
+	}
+	
+	@Override
+	public String toString() {
+		String str ="";
+		return str += "¿Á¡§¿« : ["+this.seq+this.title+this.writer+this.content+this.regDate+this.cnt+"]";
+	}
+}
