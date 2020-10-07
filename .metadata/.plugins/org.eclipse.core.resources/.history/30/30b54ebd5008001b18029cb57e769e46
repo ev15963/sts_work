@@ -8,11 +8,11 @@
 
 	<bean id="collectionBean" class="com.collection.mapping.CollectionBean">
 		<property name="addressList">
-			<set>
+			<list>
 				<value>서울시 강남구 역삼동</value>
 				<value>서울시 성동구 행당동</value>
 				<value>서울시 성동구 행당동</value>
-			</set>
+			</list>
 		</property>
 	</bean>
 

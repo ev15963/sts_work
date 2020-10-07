@@ -1,0 +1,7 @@
+package com.collection.mapping;
+
+import java.util.List;
+
+public class CollectionBean { //Alt shift T
+	private List<String> addressList;
+}

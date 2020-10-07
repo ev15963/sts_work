@@ -1,15 +1,15 @@
 package com.collection.mapping;
 
-import java.util.Set;
+import java.util.List;
 
 public class CollectionBean { //Alt shift T : getter setter
-	private Set<String> addressList;
+	private List<String> addressList;
 
-	public Set<String> getAddressList() {
+	public List<String> getAddressList() {
 		return addressList;
 	}
 
-	public void setAddressList(Set<String> addressList) {
+	public void setAddressList(List<String> addressList) {
 		this.addressList = addressList;
 	}
 }

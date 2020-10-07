@@ -1,6 +1,6 @@
 package com.collection.mapping;
 
-import java.util.Set;
+import java.util.List;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -13,7 +13,7 @@ public class CollectionBeanClient {
 		
 		//2. Spring Container로 부터 필요한 객체 요청(lookup)
 		CollectionBean bean =(CollectionBean) factory.getBean("collectionBean");
-		Set<String> addressList = bean.getAddressList();
+		List<String> addressList = bean.getAddressList();
 		for (String address : addressList) {
 			System.out.println(address.toString());
 		}
