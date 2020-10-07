@@ -13,13 +13,10 @@ public class CollectionBeanClient {
 		
 		//2. Spring Container로 부터 필요한 객체 요청(lookup)
 		CollectionBean bean =(CollectionBean) factory.getBean("collectionBean");
-		Map<String, String> addressList = bean.getAddressList();
-		
-		//map은 객체하나씩 처리
-		System.out.println("고길동의 전체 주소는? : " + addressList.get("고길동"));
-		System.out.println("마이콜의 전체 주소는? : " + addressList.get("마이콜"));
-		System.out.println("아무개의 전체 주소는? : " + addressList.get("아무개"));
-		
+		Map<String> addressList = bean.getAddressList();
+		for (String address : addressList) {
+			System.out.println(address.toString());
+		}
 		factory.close();
 	}
 }
