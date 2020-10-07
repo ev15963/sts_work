@@ -15,7 +15,7 @@
 	<context:component-scan base-package="di.anno"></context:component-scan>
 	
 	<bean id="tv" class="di.anno.LgTV"></bean>
-<!-- 	<bean id="sony" class="di.anno.SonySpeaker"></bean> -->
+	<bean id="sony" class="di.anno.SonySpeaker"></bean>
 	
-<!-- 	<bean id="apple" class="di.anno.AppleSpeaker"></bean> -->
+	<bean id="apple" class="di.anno.AppleSpeaker"></bean>
 </beans>

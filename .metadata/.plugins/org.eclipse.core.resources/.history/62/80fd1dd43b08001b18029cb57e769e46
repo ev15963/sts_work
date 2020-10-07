@@ -1,0 +1,33 @@
+package di.anno;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("tv")			//메모리상 저장
+public class LgTV implements TV{ //lg tv와 일치 하지 않는다
+	@Autowired
+	private Speaker speaker;
+	
+	public LgTV() {
+		System.out.println("===> lgtv 객체 생성");
+	}
+	
+	public void powerOn() {
+		System.out.println("LgTV-- 전원을 켠다");
+	}
+
+	public void powerOff() {
+		System.out.println("LgTV-- 전원을 끈다");
+	}
+
+	public void volumeUp() {
+		this.speaker.volumeUp();
+	}
+
+	public void volumeDown() {
+		this.speaker.volumeDown();
+	}
+	
+	
+
+}

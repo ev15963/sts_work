@@ -1,21 +1,24 @@
 package di.anno;
 
-public class SonySpeaker implements Speaker {
+import org.springframework.stereotype.Component;
+
+@Component("sony") 
+public class SonySpeaker implements Speaker { //sonyÅ¸ÀÔ°ú speaker Å¸ÀÔÀÌ °°´Ù cf)°´Ã¼°¡ ¸Þ¸ð¸®»ó Á¸ÀçÇÏÁö ¾Ê´Â´Ù. nosearch bean
 	public SonySpeaker() {
-		System.out.println("===> SonySpeaker ê°ì²´ ?ƒ?„±");
+		System.out.println("===> SonySpeaker °´Ã¼ »ý¼º");
 	}
 	/* (non-Javadoc)
 	 * @see polymorphism.di.Speaker#volumeUp()
 	 */
 	@Override
 	public void volumeUp() {
-		System.out.println("SonySpeaker--?†Œë¦¬ìš¸ë¦°ë‹¤.");
+		System.out.println("SonySpeaker--¼Ò¸® ¿Ã¸°´Ù.");
 	}
 	/* (non-Javadoc)
 	 * @see polymorphism.di.Speaker#volumeDown()
 	 */
 	@Override
 	public void volumeDown() {
-		System.out.println("SonySpeaker--?†Œë¦¬ë‚´ë¦°ë‹¤.");
+		System.out.println("SonySpeaker--¼Ò¸® ³»¸°´Ù.");
 	}
 }

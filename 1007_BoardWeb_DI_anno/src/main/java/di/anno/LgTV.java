@@ -1,9 +1,13 @@
 package di.anno;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component("tv")
-public class LgTV implements TV{
+@Component("tv")			//메모리상 저장
+public class LgTV implements TV{ //lgtv의 부모 TV와 일치 하지 않는다
+	@Autowired
+	@Qualifier("apple")
 	private Speaker speaker;
 	
 	public LgTV() {
@@ -19,11 +23,11 @@ public class LgTV implements TV{
 	}
 
 	public void volumeUp() {
-		System.out.println("LgTV-- 소리올린다.");
+		this.speaker.volumeUp();
 	}
 
 	public void volumeDown() {
-		System.out.println("LgTV-- 소리내린다.");
+		this.speaker.volumeDown();
 	}
 	
 	
