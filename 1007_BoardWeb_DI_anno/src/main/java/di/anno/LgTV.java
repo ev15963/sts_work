@@ -1,12 +1,10 @@
 package di.anno;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Component;
 
-@Component("tv")			//메모리상 저장
+@Component			//메모리상 저장
 public class LgTV implements TV{ //lgtv의 부모 TV와 일치 하지 않는다
-	@Resource(name="apple")
+//	@Resource(name="apple")
 	private Speaker speaker;
 	
 	public LgTV() {

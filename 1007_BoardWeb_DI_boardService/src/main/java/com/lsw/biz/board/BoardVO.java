@@ -15,11 +15,15 @@ public class BoardVO {
 		
 	}
 	
+
+
 	@Override
 	public String toString() {
-		String str ="";
-		return str += "¿Á¡§¿« : ["+this.seq+this.title+this.writer+this.content+this.regDate+this.cnt+"]";
+		return "BoardVO [seq=" + seq + ", title=" + title + ", writer=" + writer + ", content=" + content + ", regDate="
+				+ regDate + ", cnt=" + cnt + "]";
 	}
+
+
 
 	public int getSeq() {
 		return seq;

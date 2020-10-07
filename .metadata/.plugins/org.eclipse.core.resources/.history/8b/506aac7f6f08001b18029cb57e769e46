@@ -1,0 +1,12 @@
+package com.lsw.biz.board;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class BoardServiceClient {
+	
+	public static void main(String[] args) {
+		//1. Spring Container±¸µ¿
+		AbstractApplicationContext container = new GenericXmlApplicationContext("applicationContext.xml");
+	}
+}
