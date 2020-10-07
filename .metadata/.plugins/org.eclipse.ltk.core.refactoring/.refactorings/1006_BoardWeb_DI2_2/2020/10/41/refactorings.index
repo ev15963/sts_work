@@ -1,3 +1,8 @@
 1602027007776	Extract interface 'Speaker'
 1602029474040	Copy compilation units
 1602030162181	Copy file
+1602040220130	Move compilation unit
+1602040229165	Move compilation unit
+1602040234168	Delete element
+1602040583615	Rename package 'CollectionBeanClient'
+1602040590993	Copy compilation unit
