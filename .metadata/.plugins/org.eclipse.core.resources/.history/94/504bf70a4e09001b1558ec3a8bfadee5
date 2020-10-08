@@ -1,0 +1,19 @@
+package com.lsw.biz.user.impl;
+
+import java.sql.Connection;
+
+public class JDBCUtil {
+	public static Connection getConnection() {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			//연습용 코드
+			String url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+		
+	}
+}

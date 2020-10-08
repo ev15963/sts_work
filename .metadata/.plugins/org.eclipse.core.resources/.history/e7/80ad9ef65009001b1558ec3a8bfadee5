@@ -34,14 +34,14 @@ public class BoardDAO {
 
 		try {
 			conn = JDBCUtil.getConnection();
-			stmt = conn.prepareStatement(USER_INSERT);
+			stmt = conn.prepareStatement(BOARD_INSERT);
 			stmt.setString(1, vo.getId());
 			stmt.setString(2, vo.getPassword());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			System.out.println("insertBoard err" + e.getMessage());
 		} finally {
-			JDBCUtil.close(rs, stmt, conn);
+			JDBCUtil.close(stmt, conn);
 		}
 	}
 
@@ -51,9 +51,10 @@ public class BoardDAO {
 
 		try {
 			conn = JDBCUtil.getConnection();
-			stmt = conn.prepareStatement(USER_INSERT);
-			stmt.setString(1, vo.getId());
-			stmt.setString(2, vo.getPassword());
+			stmt = conn.prepareStatement(BOARD_UPDATE);
+			stmt.setString(1, vo.getTitle());
+			stmt.setString(2, vo.getContent());
+			stmt.setInt(3, vo.getSeq());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			System.out.println("updateBoard err" + e.getMessage());

@@ -3,7 +3,7 @@ package com.lsw.biz.user.impl;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class JDBCUtil {
 	public static Connection getConnection() {
@@ -45,7 +45,7 @@ public class JDBCUtil {
 		}
 	}
 	
-	public static void close(PreparedStatement stmt, ResultSet rs, Connection conn) {
+	public static void close(PreparedStatement stmt, Connection conn) {
 		if (stmt != null) {
 			try {
 				if(!stmt.isClosed()) {

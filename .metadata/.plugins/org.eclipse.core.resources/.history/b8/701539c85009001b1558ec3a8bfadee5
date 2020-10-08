@@ -6,14 +6,14 @@ import org.springframework.stereotype.Service;
 import com.lsw.biz.user.UserService;
 import com.lsw.biz.user.UserVO;
 
-@Service("userService") //추가
+@Service("userService")
 public class UserServiceImpl implements UserService{
 	
 //	private UserDAO UserDAO;
 //	UserServiceImpl과 UserDAO 클래스에 각각 관련된 어노테이션 추가
 	
 	
-	@Autowired //추가
+	@Autowired
 	private UserDAO UserDAO;
 	
 	
