@@ -14,7 +14,8 @@ public class UserServiceImpl implements UserService{
 	
 	@Override
 	public UserVO getUser(UserVO vo) {
-		return null; //dao 추가하기
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
