@@ -2,22 +2,25 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="public void " key="selection"/>
+		<item value="get" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="tv."/>
-			<item value="artifact"/>
-			<item value="1.8"/>
-			<item value="proper"/>
-			<item value="tomcat"/>
-			<item value="tomat"/>
-			<item value="8080"/>
-			<item value="port"/>
+			<item value="get"/>
+			<item value="board"/>
+			<item value="SEQ"/>
+			<item value="my"/>
+			<item value="Map&lt;String, String&gt;"/>
+			<item value="apple"/>
+			<item value="scan"/>
+			<item value="c"/>
 		</list>
 		<list key="replacehistory">
+			<item value="boardList"/>
+			<item value="Properties"/>
+			<item value="Pro"/>
 			<item value="public void "/>
 		</list>
 	</section>
