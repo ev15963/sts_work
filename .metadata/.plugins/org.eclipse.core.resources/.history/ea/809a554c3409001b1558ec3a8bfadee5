@@ -1,0 +1,5 @@
+UserVO.javapackage com.lsw.biz.user.impl;
+
+public class UserDAO {
+
+}

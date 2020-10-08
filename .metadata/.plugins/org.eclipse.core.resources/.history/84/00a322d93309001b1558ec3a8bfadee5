@@ -1,0 +1,5 @@
+com.lsw.biz.userpackage com.lsw.biz.user;
+
+public class UserService {
+
+}

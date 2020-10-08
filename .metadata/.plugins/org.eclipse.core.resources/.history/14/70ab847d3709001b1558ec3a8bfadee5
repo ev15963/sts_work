@@ -1,0 +1,5 @@
+package com.lsw.biz.user;
+
+public interface UserService {
+
+}
