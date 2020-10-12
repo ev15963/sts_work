@@ -27,12 +27,12 @@
 <!-- 		<aop:aspect ref="after"> -->
 <!-- 			<aop:after method="finallyLog" pointcut-ref="allPointcut" /> -->
 <!-- 		</aop:aspect> -->
-		<aop:aspect ref="around">
-			<aop:around method="aroundLog" pointcut-ref="allPointcut" />
-		</aop:aspect>
-<!-- 		<aop:aspect ref="afterReturning"> -->
-<!-- 			<aop:after-returning method="afterLog" pointcut-ref="getPointcut" returning="returnObj" /> -->
+<!-- 		<aop:aspect ref="around"> -->
+<!-- 			<aop:after method="aroundLog" pointcut-ref="allPointcut" /> -->
 <!-- 		</aop:aspect> -->
+		<aop:aspect ref="afterReturning">
+			<aop:after-returning method="afterLog" pointcut-ref="getPointcut" returning="returnObj" />
+		</aop:aspect>
 <!-- 		<aop:aspect ref="before"> -->
 <!-- 			<aop:before method="beforeLog" pointcut-ref="allPointcut" /> -->
 <!-- 		</aop:aspect> -->
