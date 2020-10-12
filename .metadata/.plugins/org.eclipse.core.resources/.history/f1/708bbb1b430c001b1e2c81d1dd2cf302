@@ -9,8 +9,7 @@ public class AfterReturningAdvice {
 		String method = jp.getSignature().getName();
 		if (returnObj instanceof BoardVO) {
 			BoardVO BVO = (BoardVO) returnObj;
-			if(BVO.getWriter().equals("test")) {
-				System.out.println("ddddd");
+			if(BVO.getWriter().equals("임시작성자")) {
 				System.out.println(BVO.getWriter() + "로그인(Admin)");
 			}
 		}

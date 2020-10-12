@@ -9,12 +9,10 @@ public class AfterReturningAdvice {
 		String method = jp.getSignature().getName();
 		if (returnObj instanceof BoardVO) {
 			BoardVO BVO = (BoardVO) returnObj;
-			if(BVO.getWriter().equals("test")) {
-				System.out.println("ddddd");
-				System.out.println(BVO.getWriter() + "로그인(Admin)");
+			if(BVO.getRole().equals("Admin")) {
+				System.out.println(user.getName() + "로그인(Admin)");
 			}
 		}
-		System.out.println("[사후처리] "+method+ "() 메소드 리턴값 : "
-				+ returnObj.toString());
+		System.out.println("[사후처리] 비즈니스 로직 수행 후 동작");
 	}
 }
