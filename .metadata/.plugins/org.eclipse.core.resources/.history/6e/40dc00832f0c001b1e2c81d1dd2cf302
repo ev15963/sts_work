@@ -1,0 +1,5 @@
+package com.lsw.biz.board.common;
+
+public class BeforeAdvice {
+
+}
