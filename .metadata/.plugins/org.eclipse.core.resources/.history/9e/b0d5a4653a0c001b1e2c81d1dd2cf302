@@ -13,22 +13,21 @@
 	<bean id="afterThrowing" class="com.lsw.biz.board.common.AfterThrowingAdvice"></bean>
 	<bean id="after" class="com.lsw.biz.board.common.AfterAdvice"></bean>
 	<bean id="around" class="com.lsw.biz.board.common.AroundAdvice"></bean>
-	<bean id="before" class="com.lsw.biz.board.common.BeforeAdvice"></bean>
 
 	<aop:config>
 		<aop:pointcut expression="execution(* com.lsw.biz..*Impl.*(..))"
 			id="allPointcut" />
 		<aop:pointcut expression="execution(* com.lsw.biz..*Impl.get*(..))"
 			id="getPointcut" />
-<!-- 		<aop:aspect ref="afterThrowing"> -->
-<!-- 			<aop:after-throwing method="exceptionLog" pointcut-ref="allPointcut" /> -->
-<!-- 		</aop:aspect> -->
-<!-- 		<aop:aspect ref="after"> -->
-<!-- 			<aop:after method="finallyLog" pointcut-ref="allPointcut" /> -->
-<!-- 		</aop:aspect> -->
-<!-- 		<aop:aspect ref="around"> -->
-<!-- 			<aop:after method="aroundLog" pointcut-ref="allPointcut" /> -->
-<!-- 		</aop:aspect> -->
+		<aop:aspect ref="afterThrowing">
+			<aop:after-throwing method="exceptionLog" pointcut-ref="allPointcut" />
+		</aop:aspect>
+		<aop:aspect ref="after">
+			<aop:after method="finallyLog" pointcut-ref="allPointcut" />
+		</aop:aspect>
+		<aop:aspect ref="around">
+			<aop:after method="aroundLog" pointcut-ref="allPointcut" />
+		</aop:aspect>
 		<aop:aspect ref="before">
 			<aop:before method="beforeLog" pointcut-ref="allPointcut" />
 		</aop:aspect>
