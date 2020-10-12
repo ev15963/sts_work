@@ -1,25 +1,24 @@
 package com.lsw.biz.user.impl;
 
-import com.lsw.biz.board.common.LogAdvice;
 import com.lsw.biz.user.UserService;
 import com.lsw.biz.user.UserVO;
 
 public class UserServiceImpl implements UserService{
 	private UserDAO userDAO;
-	private LogAdvice log;
+//	private LogAdvice log;
 
 	public UserServiceImpl() {
-		log = new LogAdvice();
+//		log = new LogAdvice();
 	}
 	
 	public void setUserDAO(UserDAO userDAO) {
-		log.printLog();
+//		log.printLog();
 		this.userDAO = userDAO;
 	}
 	
 	@Override
 	public UserVO getUser(UserVO vo) {
-		log.printLog();
+//		log.printLog();
 		return userDAO.getUser(vo);
 	}
 	
