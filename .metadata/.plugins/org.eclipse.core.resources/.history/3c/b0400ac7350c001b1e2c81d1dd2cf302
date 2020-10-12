@@ -21,9 +21,6 @@
 		<aop:aspect ref="afterThrowing">
 			<aop:after-throwing method="exceptionLog" pointcut-ref="allPointcut" />
 		</aop:aspect>
-		<aop:aspect ref="after">
-			<aop:after method="finallyLog" pointcut-ref="allPointcut" />
-		</aop:aspect>
 	</aop:config>
 
 </beans>
