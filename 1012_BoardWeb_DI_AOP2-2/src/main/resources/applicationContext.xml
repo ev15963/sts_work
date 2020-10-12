@@ -12,6 +12,7 @@
 
 	<bean id="afterThrowing" class="com.lsw.biz.board.common.AfterThrowingAdvice"></bean>
 	<bean id="after" class="com.lsw.biz.board.common.AfterAdvice"></bean>
+	<bean id="around" class="com.lsw.biz.board.common.AroundAdvice"></bean>
 
 	<aop:config>
 		<aop:pointcut expression="execution(* com.lsw.biz..*Impl.*(..))"
@@ -23,6 +24,9 @@
 		</aop:aspect>
 		<aop:aspect ref="after">
 			<aop:after method="finallyLog" pointcut-ref="allPointcut" />
+		</aop:aspect>
+		<aop:aspect ref="around">
+			<aop:after method="aroundLog" pointcut-ref="allPointcut" />
 		</aop:aspect>
 	</aop:config>
 

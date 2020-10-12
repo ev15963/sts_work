@@ -12,7 +12,7 @@
 
 	<bean id="afterThrowing" class="com.lsw.biz.board.common.AfterThrowingAdvice"></bean>
 	<bean id="after" class="com.lsw.biz.board.common.AfterAdvice"></bean>
-	<bean id="around" class="com.lsw.biz.board.common.AroundAdvice"></bean>
+	<bean id="around" class="com.lsw.biz.board.common.AroudnAdvice"></bean>
 
 	<aop:config>
 		<aop:pointcut expression="execution(* com.lsw.biz..*Impl.*(..))"

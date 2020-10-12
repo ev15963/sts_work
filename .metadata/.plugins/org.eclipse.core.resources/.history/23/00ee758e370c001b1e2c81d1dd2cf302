@@ -1,0 +1,9 @@
+package com.lsw.biz.board.common;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class AroundAdvice {
+	public Object aroundLog(ProceedingJoinPoint pjp) throws Throwable{
+		System.out.println("[Before]: 비즈니스 메소드 수행 전 무조건 동작");
+	}
+}
