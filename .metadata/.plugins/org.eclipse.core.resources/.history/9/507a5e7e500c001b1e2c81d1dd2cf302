@@ -7,12 +7,16 @@ import com.lsw.biz.board.BoardVO;
 public class AfterReturningAdvice {
 	public void afterLog(JoinPoint jp, Object returnObj) {
 		String method = jp.getSignature().getName();
+//		System.out.println("returnObj : "+returnObj+";;;;;");
 		if (returnObj instanceof BoardVO) {
 			BoardVO BVO = (BoardVO) returnObj;
-			if(BVO.getWriter().equals("임시작성자")) {
-				System.out.println("ddddd");
+			if(BVO.getWriter().equals("test")) {
+//				System.out.println("ddddd");
 				System.out.println(BVO.getWriter() + "로그인(Admin)");
 			}
+		} else {
+			System.out.println("일치하지 않음");
+			System.out.println(BVO.getWriter() + "로그인(Admin)");
 		}
 		System.out.println("[사후처리] "+method+ "() 메소드 리턴값 : "
 				+ returnObj.toString());
