@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.lsw.biz.UserSericeClient&apos; to &apos;UserServiceClient&apos;&#x0D;&#x0A;- Original project: &apos;1013_BoardWeb_DI_AOP&apos;&#x0D;&#x0A;- Original element: &apos;com.lsw.biz.UserSericeClient&apos;&#x0D;&#x0A;- Renamed element: &apos;com.lsw.biz.UserServiceClient&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UserSericeClient&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/resources&lt;com.lsw.biz{UserSericeClient.java[UserSericeClient" matchStrategy="1" name="UserServiceClient" qualified="false" references="true" similarDeclarations="false" stamp="1602550008763" textual="false" version="1.0"/>
+</session>
