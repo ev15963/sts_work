@@ -1,7 +1,6 @@
 package com.lsw.biz.board.common;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Service;
@@ -14,7 +13,6 @@ public class AroundAdvice {
 	@Pointcut("execution(* com.lsw.biz..*Impl.*(..))")
 	public void allPointcut(){}
 	
-	@Around("allPointcut()")
 	public Object aroundLog(ProceedingJoinPoint pjp) throws Throwable {
 		String method = pjp.getSignature().getName();
 

@@ -7,8 +7,6 @@ import org.aspectj.lang.annotation.Pointcut;
 import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.user.UserVO;
 
-
-
 public class AfterReturningAdvice {
 	@Pointcut("execution(* com.lsw.biz..*Impl.get*(..))")
 	public void getPointcut(){}
