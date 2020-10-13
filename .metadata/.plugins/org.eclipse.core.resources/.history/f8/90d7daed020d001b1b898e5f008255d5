@@ -31,7 +31,7 @@ public class BoardDAOSpring extends JdbcDaoSupport{
 	}
 	
 	//글수정
-	public void updateBoard(BoardVO vo) {
+	public void updateBoard(Board vo) {
 		System.out.println("===> Spring JDBC로 updateBoard() 기능 처리");
 		getJdbcTemplate().update(BOARD_UPDATE, vo.getTitle(), vo.getContent(), vo.getSeq());
 	}
