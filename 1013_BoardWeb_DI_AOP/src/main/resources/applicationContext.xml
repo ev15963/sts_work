@@ -16,6 +16,21 @@
 
 	<aop:config>
 		<aop:pointcut id="allPointcut"
-			expression="execution "
+			expression="execution(* com.lsw.biz..*Impl.*(..))" />
+		<aop:pointcut id="getPointcut"
+			expression="execution(* com.lsw.biz..*Impl.get*(..))" />
+		<aop:aspect ref="log">
+			<aop:before pointcut-ref="allPointcut" method="printLog" />
+		</aop:aspect>
+	
 	</aop:config>
+	
+<!-- 	DataSource 설정 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+							destory-method="close">
+	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+	<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:XE" />
+	<property name="username" value="sa" />
+	<property name="password" value="" />						
+	</bean>
 </beans>
