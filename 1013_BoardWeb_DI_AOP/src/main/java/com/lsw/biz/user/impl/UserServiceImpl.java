@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.lsw.biz.user.UserService;
 import com.lsw.biz.user.UserVO;
 
-@Service("userService") //추가
+//@Service("userService") //추가
 public class UserServiceImpl implements UserService{
 	
 //	private UserDAO UserDAO;

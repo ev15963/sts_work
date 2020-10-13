@@ -9,8 +9,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.lsw.biz.board.BoardVO;
+
 //DAO(Data Access Object
-@Repository("boardDAO")
+//@Repository("BoardDAO")
 public class UserDAO {
 	// JDBC 관련 변수
 	private Connection conn = null;
