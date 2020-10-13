@@ -10,13 +10,13 @@ import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.user.UserVO;
 
 
-@Service
-@Aspect
+//@Service
+//@Aspect
 public class AfterReturningAdvice {
-	@Pointcut("execution(* com.lsw.biz..*Impl.get*(..))")
+//	@Pointcut("execution(* com.lsw.biz..*Impl.get*(..))")
 	public void getPointcut(){}
 	
-	@AfterReturning(pointcut="getPointcut()", returning="returnObj")
+//	@AfterReturning(pointcut="getPointcut()", returning="returnObj")
 	public void afterLog(JoinPoint jp, Object returnObj) {
 		String method = jp.getSignature().getName();
 		
@@ -27,7 +27,7 @@ public class AfterReturningAdvice {
 				System.out.println(user.getRole() + "로그인(Admin)");
 			}
 		}
-		System.out.println("[사후처리] "+method+ "() 메소드 리턴값 : "
+		System.out.println("[사후처리] 2222"+method+ "() 메소드 리턴값 : "
 				+ returnObj.toString());
 	}
 }
