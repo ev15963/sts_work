@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
+<context:component-scan base-package="com.khj.biz" />
+
+<!-- database.properties경로 지정 -->
+<context:property-placeholder location="classpath:config/database.properties"/>
+
+	<!-- Spring을 이용한 JDBC접속  -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+	 <property name="driverClassName" value="${jdbc.driver}"></property>
+	 <property name="url" value="${jdbc.url}"></property>
+	 <property name="username" value="${jdbc.username}"></property>
+	 <property name="password" value="${jdbc.password}"></property>
+	</bean>
+	
+	
+	<!-- JdbcTemplate클래서 <bean>등록을 통한 DI -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="afterReturning" class="com.khj.biz.board.common.AfterReturningAdvice"/>
+	<aop:config>
+		<aop:pointcut expression="execution(* com.khj.biz..*Impl.get*(..))" id="getPointcut"/>
+		<aop:aspect ref="afterReturning">
+			<aop:after-returning pointcut-ref="getPointcut" method="afterLog" />
+		</aop:aspect>
+	</aop:config>
+	
+	<!-- Transaction Registration -->
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<!-- Transaction Configuration -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true"/>
+			<tx:method name="*"/>
+		</tx:attributes>	
+	</tx:advice>
+	
+	<aop:config>
+		<aop:pointcut id="txPointcut" expression="execution(* com.khj.biz..*(..))" />
+		<aop:advisor pointcut-ref="txPointcut" advice-ref="txAdvice" />		
+	</aop:config>
+	
+
+	<bean id="log" class="com.khj.biz.board.common.Log4jAdvice"></bean>
+	<aop:config>
+		<aop:pointcut id="allPointcut" expression="execution(* com.khj.biz..*Impl.*(..))"/>
+		<aop:pointcut id="getPointcut" expression="execution(* com.khj.biz..*Impl.get*(..))"/>
+		
+		<aop:aspect ref="log">
+			<aop:after pointcut-ref="getPointcut" method="printLogging" />
+		</aop:aspect>
+	</aop:config>
+
+<bean id="userService" class="com.khj.biz.user.impl.UserServiceImpl">
+	<property name="userDAO" ref="userDAO" />
+</bean>
+
+<bean id="userDAO" class="com.khj.biz.user.impl.UserDAO" />
+
+
+
+
+</beans>

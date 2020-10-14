@@ -1,4 +1,4 @@
 #Tomcat publish data
-#Tue Oct 06 10:27:52 KST 2020
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\admin\\.m2\\repository\\org\\springframework\\spring-web\\4.2.4.RELEASE\\spring-web-4.2.4.RELEASE.jar=C\:\\sts-bundle\\pivotal-tc-server-developer-3.2.4.SR1\\base-instance\\wtpwebapps\\BoardWeb\\WEB-INF\\lib\\spring-web-4.2.4.RELEASE.jar
-org.eclipse.jst.jee.server\:1006_BoardWeb_DI=C\:\\sts-bundle\\pivotal-tc-server-developer-3.2.4.SR1\\base-instance\\wtpwebapps\\1006_BoardWeb_DI
+#Wed Oct 14 10:31:18 KST 2020
+org.eclipse.jst.jee.server\:1014_BoardWeb_tran=C\:\\sts-bundle\\pivotal-tc-server-developer-3.2.4.SR1\\base-instance\\wtpwebapps\\1014_BoardWeb_tran
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\admin\\.m2\\repository\\org\\springframework\\spring-web\\4.2.4.RELEASE\\spring-web-4.2.4.RELEASE.jar=C\:\\sts-bundle\\pivotal-tc-server-developer-3.2.4.SR1\\base-instance\\wtpwebapps\\1014_BoardWeb_tran\\WEB-INF\\lib\\spring-web-4.2.4.RELEASE.jar

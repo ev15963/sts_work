@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class JDBCUtil {
 	public static Connection getConnection() {
@@ -11,9 +12,13 @@ public class JDBCUtil {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			//연습용 코드
 			String url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
-			return DriverManager.getConnection(url);
-		} catch (Exception e) {
+			String id= "lsw";
+			String pw="1234";
+			return DriverManager.getConnection(url, id, pw);
+		} catch (ClassNotFoundException e) {
 			System.out.println("conn err"+e.getMessage());
+		} catch (SQLException e) {
+			System.out.println("getconn err"+e.getMessage());
 		}
 		
 		return null;

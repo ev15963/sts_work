@@ -18,12 +18,12 @@ public class UserServiceImpl implements UserService{
 	
 	
 	public void setUserDAO(UserDAO userDAO) {
-		UserDAO = userDAO;
+		this.UserDAO = userDAO;
 	}
 	
 	@Override
 	public UserVO getUser(UserVO vo) {
-		return null; //dao 추가하기
+		return UserDAO.getUser(vo); //dao 추가하기
 	}
 
 }

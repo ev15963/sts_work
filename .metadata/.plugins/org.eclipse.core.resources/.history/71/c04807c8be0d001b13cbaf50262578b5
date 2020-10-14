@@ -1,0 +1,9 @@
+<%@page import="com.lsw.biz.user.impl.UserDAO" %>
+<%@page import="com.lsw.biz.user.UserVO" %>
+<%@ page contentType="text/html; charset=UTF-8"%>
+
+<% 
+	//1. 사용자 입력 정보 호출
+	String id = request.getParameter("id");
+	String password = request.getParameter("password");
+%>
