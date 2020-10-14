@@ -20,7 +20,13 @@ public class BoardDAOSpring{
 	private final String BOARD_DELETE = "delete board where seq=?";
 	private final String BOARD_GET = "select * from board where seq=?";
 	private final String BOARD_LIST="select * from board order by seq desc";
+	// Transaction 테스트를 위한 SQL
+	private final String BOARD_INSERT_TRANSACTION = 
+			"insert into board_spring (seq, title, writer, content) value (?, ?, ?, ?)";
 	
+	public BoardDAOSpring() {
+		
+	}
 //	@Autowired
 //	public void setSuperDataSource(DataSource datasource) {
 //		super.setDataSource(datasource);
@@ -28,10 +34,13 @@ public class BoardDAOSpring{
 	
 	//CRUD 기능의 메소드 구현
 	//글등록
+	System.out.println("==> JDBC로 insertBoard() 기능 처리 : "+ vo.toString());
+
+	JdbcTemplate.update(BOARD_INSERT, vo.getSeq(), vo.getTitle(), vo.getWriter(), vo.getContent());
 	
 	public void insertBoard(BoardVO vo) {
 		System.out.println("===> Spring JDBC로 insertBoard() 기능 처리");
-		getJdbcTemplate().update(BOARD_INSERT, vo.getTitle(), vo.getWriter(), vo.getContent());
+		getJdbcTemplate().update(BOARD_INSERT, vo.getSeq(), vo.getTitle(), vo.getWriter(), vo.getContent());
 	}
 	
 	//글수정

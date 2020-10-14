@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.lsw.biz.board.BoardVO;
@@ -27,11 +28,14 @@ public class BoardDAO {
 	private final String BOARD_GET = "select * from board_spring where seq=?";
 	private final String BOARD_LIST = "select * from board_spring order by seq desc";
 
+
+	
 	// CRUD 기능의 메소드 구현
 	// 글등록
 	public void insertBoard(BoardVO vo) {
-		System.out.println("==> JDBC로 insertBoard() 기능 처리");
+		System.out.println("==> JDBC로 insertBoard() 기능 처리 : ");
 
+		
 		try {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_INSERT);
