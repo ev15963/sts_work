@@ -1,0 +1,21 @@
+<%@ page import="com.lsw.biz.board.impl.BoardDAO" %>
+<%@ page import="com.lsw.biz.board.BoardVO" %>
+<%@ page contentType="text/html; charset=UTF-8"%>
+
+<%
+//1. 검색할 게시글 번호 추출
+String seq = request.getParameter("seq");
+
+
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>글 상세</title>
+</head>
+<body>
+
+</body>
+</html>

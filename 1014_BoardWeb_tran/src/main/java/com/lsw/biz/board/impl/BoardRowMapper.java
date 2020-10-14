@@ -10,7 +10,7 @@ import com.lsw.biz.board.BoardVO;
 public class BoardRowMapper implements RowMapper<BoardVO> {
 
 	public BoardRowMapper() {
-
+		System.out.println("BoardRowMapper ½ÇÇà");
 	}
 
 	@Override
@@ -21,8 +21,8 @@ public class BoardRowMapper implements RowMapper<BoardVO> {
 		board.setTitle(rs.getString("title"));
 		board.setWriter(rs.getString("writer"));
 		board.setContent(rs.getString("content"));
-		board.setRegDate(rs.getDate("writer"));
-		board.setCnt(rs.getInt("writer"));
+		board.setRegDate(rs.getDate("regdate"));
+		board.setCnt(rs.getInt("cnt"));
 		return board;
 	}
 }

@@ -15,6 +15,9 @@ public class BoardServiceImpl implements BoardService{
 //	private BoardDAO boardDAO;
 	private BoardDAOSpring boardDAO;
 	
+	public BoardServiceImpl() {
+	}
+	
 	@Override
 	public void insertBoard(BoardVO vo) {
 //		if(vo.getSeq()==0) {
