@@ -1,0 +1,26 @@
+create table board_spring(
+	seq NUMBER(5) PRIMARY KEY,
+	title VARCHAR2(200),
+	writer VARCHAR2(20),
+	content VARCHAR2(2000),
+	regdate DATE DEFAULT SYSDATE,
+	cnt NUMBER(5) DEFAULT 0
+);
+
+commit;
+
+select * from board_spring order by seq desc;
+
+select nvl(max(seq), 0)+1 from board_spring;
+
+insert into board_spring (seq, title, writer, content)
+values((select nvl(max(seq), 0)+1 from board_spring), 'test', 'test', 'test');
+
+SQL> select * from users;
+
+ID               PASSWORD         NAME										ROLE
+---------------- ---------------- ----------------------------------------	----------
+test             test123          lsw										admin
+test             test123          lsw										admin
+
+
