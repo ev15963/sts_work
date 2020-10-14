@@ -1,9 +1,0 @@
-package com.collection.mapping;
-
-public class CollectionBeanClient {
-
-	public CollectionBeanClient() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
