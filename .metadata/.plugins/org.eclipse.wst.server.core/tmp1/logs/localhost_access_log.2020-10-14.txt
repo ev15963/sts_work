@@ -153,3 +153,10 @@
 0:0:0:0:0:0:0:1 - - [14/Oct/2020:17:46:39 +0900] "GET /BoardWeb/getBoard.jsp?seq=31 HTTP/1.1" 500 2378
 0:0:0:0:0:0:0:1 - - [14/Oct/2020:17:46:58 +0900] "GET /BoardWeb/getBoard.jsp?seq=31 HTTP/1.1" 500 2378
 0:0:0:0:0:0:0:1 - - [14/Oct/2020:17:48:29 +0900] "GET /BoardWeb/getBoard.jsp?seq=31 HTTP/1.1" 200 1296
+0:0:0:0:0:0:0:1 - - [14/Oct/2020:18:53:30 +0900] "GET /BoardWeb/getBoard.jsp?seq=31 HTTP/1.1" 200 1296
+0:0:0:0:0:0:0:1 - - [14/Oct/2020:18:53:31 +0900] "GET /BoardWeb/insertBoard.jsp HTTP/1.1" 200 891
+0:0:0:0:0:0:0:1 - - [14/Oct/2020:18:55:17 +0900] "GET /BoardWeb/insertBoard.jsp HTTP/1.1" 200 905
+0:0:0:0:0:0:0:1 - - [14/Oct/2020:19:07:20 +0900] "POST /BoardWeb/insertBoard_proc.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [14/Oct/2020:19:07:20 +0900] "GET /BoardWeb/getBoardList.jsp HTTP/1.1" 200 8410
+0:0:0:0:0:0:0:1 - - [14/Oct/2020:19:07:23 +0900] "GET /BoardWeb/getBoard.jsp?seq=38 HTTP/1.1" 200 1263
+0:0:0:0:0:0:0:1 - - [14/Oct/2020:19:13:31 +0900] "POST /BoardWeb/updateBoard_proc.jsp HTTP/1.1" 404 1052
