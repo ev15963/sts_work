@@ -29,6 +29,10 @@ public class BoardDAO {
 	private final String BOARD_LIST = "select * from board_spring order by seq desc";
 
 
+	public BoardDAO() {
+		
+	}
+	
 	
 	// CRUD 기능의 메소드 구현
 	// 글등록
@@ -92,7 +96,7 @@ public class BoardDAO {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_GET);
 			stmt.setInt(1, vo.getSeq());
-			stmt.executeQuery();
+			rs=stmt.executeQuery();
 			
 			if(rs.next()) {
 				board = new BoardVO();
