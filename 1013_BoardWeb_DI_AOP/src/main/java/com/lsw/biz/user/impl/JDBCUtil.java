@@ -11,7 +11,9 @@ public class JDBCUtil {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			//연습용 코드
 			String url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
-			return DriverManager.getConnection(url);
+			String id="lsw";
+			String pw="1234";
+			return DriverManager.getConnection(url, id, pw);
 		} catch (Exception e) {
 			System.out.println("conn err"+e.getMessage());
 		}

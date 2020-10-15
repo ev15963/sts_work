@@ -7,12 +7,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import com.lsw.biz.board.BoardVO;
 
 //DAO(Data Access Object
-@Repository("boardDAO")
+//@Repository("boardDAO")
 public class BoardDAO {
 	// JDBC 관련 변수
 	private Connection conn = null;
@@ -21,7 +19,7 @@ public class BoardDAO {
 
 	// SQL 명령어들
 	private final String BOARD_INSERT = "insert into board_spring (seq, title, writer, content) values"
-														+ " ((select nvl(max(seq), 0)+1 from board_spring) , ?, ?, ?)";
+			+ " ((select nvl(max(seq), 0)+1 from board_spring) , ?, ?, ?)";
 	private final String BOARD_UPDATE = "update board_spring set title=?, content=? where seq=?";
 	private final String BOARD_DELETE = "delete board_spring where seq=?";
 	private final String BOARD_GET = "select * from board_spring where seq=?";
@@ -89,8 +87,8 @@ public class BoardDAO {
 			stmt = conn.prepareStatement(BOARD_GET);
 			stmt.setInt(1, vo.getSeq());
 			stmt.executeQuery();
-			
-			if(rs.next()) {
+
+			if (rs.next()) {
 				board = new BoardVO();
 				board.setSeq(rs.getInt("SEQ"));
 				board.setTitle(rs.getString("TITLE"));
@@ -116,7 +114,7 @@ public class BoardDAO {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_LIST);
 			rs = stmt.executeQuery();
-			while(rs.next()) {
+			while (rs.next()) {
 				BoardVO board = new BoardVO();
 				board.setSeq(rs.getInt("SEQ"));
 				board.setTitle(rs.getString("TITLE"));
@@ -131,7 +129,6 @@ public class BoardDAO {
 		} finally {
 			JDBCUtil.close(rs, stmt, conn);
 		}
-		
 
 		return boardList;
 	}

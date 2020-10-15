@@ -6,6 +6,10 @@ public class UserVO {
 	private String name;
 	private String role;
 	
+	public UserVO() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	@Override
 	public String toString() {
 		return "UserVO [id=" + id + ", password=" + password + ", name=" + name + ", role=" + role + "]";

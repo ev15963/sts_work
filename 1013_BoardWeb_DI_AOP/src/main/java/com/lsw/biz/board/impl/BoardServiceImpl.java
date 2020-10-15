@@ -3,12 +3,11 @@ package com.lsw.biz.board.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import com.lsw.biz.board.BoardService;
 import com.lsw.biz.board.BoardVO;
 
-@Service("boardService")
+//@Service("boardService")
 public class BoardServiceImpl implements BoardService{
 
 	@Autowired

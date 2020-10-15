@@ -14,7 +14,7 @@
 	<!-- method="exceptLog" returning="returnObj" throwing="exceptObj" /> -->
 	<!-- </aop:aspect> -->
 
-	<aop:config>
+<!-- 	<aop:config> -->
 <!-- 		<aop:pointcut id="allPointcut" expression="execution(* com.lsw.biz..*Impl.*(..))" /> -->
 <!-- 		<aop:pointcut id="getPointcut" expression="execution(* com.lsw.biz..*Impl.get*(..))" /> -->
 
@@ -32,7 +32,7 @@
 <!-- 				pointcut-ref="allPointcut" throwing="exceptObj" /> -->
 <!-- 		</aop:aspect> -->
 
-	</aop:config>
+<!-- 	</aop:config> -->
 
 <!-- 	<bean id="log" class="com.lsw.biz.board.common.LogAdvice"></bean> -->
 	
