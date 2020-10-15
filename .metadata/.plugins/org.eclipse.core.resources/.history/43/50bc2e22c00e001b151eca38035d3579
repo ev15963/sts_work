@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StopWatch;
 
 
-@Service
-@Aspect
+//@Service
+//@Aspect
 public class AroundAdvice {
-	@Pointcut("execution(* com.lsw.biz..*Impl.*(..))")
+//	@Pointcut("execution(* com.lsw.biz..*Impl.*(..))")
 	public void allPointcut(){}
 	
-	@Around("allPointcut()")
+//	@Around("allPointcut()")
 	public Object aroundLog(ProceedingJoinPoint pjp) throws Throwable {
 		String method = pjp.getSignature().getName();
 
