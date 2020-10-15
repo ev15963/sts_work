@@ -4,13 +4,14 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 
 <%
-	//1. 사용자 입력 정보 추출(검색기능은 나중에 구현)
-	//2. DB 연동 처리
-	BoardVO vo = new BoardVO();
-	BoardDAO boardDAO = new BoardDAO();
-	List<BoardVO> boardList = boardDAO.getBoardList(vo);
+	// 세션에 저장된 글 목록을 꺼낸다
+	
+	List<BoardVO> boardList = (List) session.getAttribute("boardList");
+// 	List<BoardVO> boardList = boardDAO.getBoardList(vo);
 
 	//3. 응답 화면 구성
+	
+
 %>
 
 <!DOCTYPE html>
@@ -19,8 +20,7 @@
 <meta charset="UTF-8">
 <title>글 목록</title>
 </head>
-<body>
-	<center>
+<body align ="center">
 		<h1>글 목록</h1>
 		<h3>
 			테스트님 환영합니다. <a href="logout_proc.jsp">Log-out</a>
@@ -53,12 +53,13 @@
 			</tr>
 
 			<%
+			/////  jsp -> do
 				for (BoardVO board : boardList) {
 			%>
 			<tr>
 				<td><%=board.getSeq()%></td>
 				<td align="left"><a
-					href="getBoard.jsp?seq=<%=board.getSeq()%>"> <%=board.getTitle()%></a></td>
+					href="getBoard.do?seq=<%=board.getSeq()%>"> <%=board.getTitle()%></a></td>
 				<td><%=board.getWriter()%></td>
 				<td><%=board.getRegDate()%></td>
 				<td><%=board.getCnt()%></td>
@@ -69,6 +70,5 @@
 
 		</table>
 		<br> <a href="insertBoard.jsp">새글 등록</a>
-	</center>
 </body>
 </html>

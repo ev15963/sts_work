@@ -3,18 +3,8 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 
 <%
-	//1. 검색할 게시글 번호 추출
-	String seq = request.getParameter("seq");
-// 	System.out.print(seq);
-
-	//2. DB 연동 처리
-	BoardVO vo = new BoardVO();
-	vo.setSeq(Integer.parseInt(seq));
-
-	BoardDAO bDAO = new BoardDAO();
-	BoardVO board = bDAO.getBoard(vo);
-
-	//3. 응답 화면 구성
+	//세션에  저장된 게시글 정보를 꺼낸다.
+	BoardVO board = (BoardVO) session.getAttribute("board");
 %>
 <!DOCTYPE html>
 <html>

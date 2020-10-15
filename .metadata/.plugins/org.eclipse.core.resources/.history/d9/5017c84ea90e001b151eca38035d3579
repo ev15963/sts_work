@@ -88,26 +88,6 @@ public class DispatcherServlet extends HttpServlet {
 			System.out.println("글삭제처리");
 		} else if (path.equals("/getBoard.do")) {
 			System.out.println("글상세조회처리");
-			
-			//getBoard.jsp 내용 가져오기
-			
-			//1. 검색할 게시글 번호 추출
-			String seq = request.getParameter("seq");
-//		 	System.out.print(seq);
-
-			//2. DB 연동 처리
-			BoardVO vo = new BoardVO();
-			vo.setSeq(Integer.parseInt(seq));
-
-			BoardDAO bDAO = new BoardDAO();
-			BoardVO board = bDAO.getBoard(vo);
-			
-			//3. 검색결과 세션에 저장하고 상세 화면으로 이동
-			HttpSession session = request.getSession();
-			session.setAttribute("board", board);
-			response.sendRedirect("getBoard.jsp");
-			
-			
 		} else if (path.equals("/getBoardList.do")) {
 			System.out.println("글목록검색처리");
 			
