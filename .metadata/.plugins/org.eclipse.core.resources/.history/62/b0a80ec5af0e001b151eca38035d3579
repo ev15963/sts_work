@@ -6,7 +6,7 @@
 <%
 	// 세션에 저장된 글 목록을 꺼낸다
 	
-	List<BoardVO> boardList = (List) session.getAttribute("boardList");
+	List<BoardVO> boardList =  (BoardVO) session.getAttribute("board");
 // 	List<BoardVO> boardList = boardDAO.getBoardList(vo);
 
 	//3. 응답 화면 구성

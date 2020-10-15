@@ -14,7 +14,7 @@
 </head>
 <body>
 		<h1>글 상세</h1>
-		<a href="logout_proc.jsp">Log-out</a>
+		<a href="logout.do">Log-out</a>
 		<hr>
 	<div align="center">
 		<form action="updateBoard.do" method="post">

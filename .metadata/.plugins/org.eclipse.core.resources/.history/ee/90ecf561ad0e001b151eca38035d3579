@@ -54,9 +54,7 @@
 
 			<%
 			/////  jsp -> do
-			
-				
-				for (BoardVO board : boardList) {
+				for (BoardVO board : bDAO) {
 			%>
 			<tr>
 				<td><%=board.getSeq()%></td>

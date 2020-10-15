@@ -124,7 +124,6 @@ public class DispatcherServlet extends HttpServlet {
 			//1. 사용자 입력 정보 추출
 			request.setCharacterEncoding("UTF-8");
 			String title = request.getParameter("title");
-			//작성자 고정
 			String content = request.getParameter("content");
 			String seq = request.getParameter("seq");
 			

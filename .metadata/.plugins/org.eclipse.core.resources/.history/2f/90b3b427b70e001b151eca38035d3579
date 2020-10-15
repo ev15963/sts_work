@@ -24,7 +24,7 @@
 </tr>
 <tr>
 <td bgcolor="orange" width="70"> 내용</td> <td align="left">
-<textarea type="content" name="content" cols="40" rows="10" /> </textarea> </td>
+<textarea type="content" cols="40" rows="10" /> </textarea> </td>
 </tr>
 <tr>
 <td colspan="2" align="center">

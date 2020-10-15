@@ -54,8 +54,6 @@
 
 			<%
 			/////  jsp -> do
-			
-				
 				for (BoardVO board : boardList) {
 			%>
 			<tr>
