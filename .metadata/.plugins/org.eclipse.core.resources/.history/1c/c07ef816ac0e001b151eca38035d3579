@@ -130,8 +130,6 @@ public class DispatcherServlet extends HttpServlet {
 		} else if (path.equals("/deleteBoard.do")) {
 			System.out.println("글삭제처리");
 			
-			//deleteBoard_proc.jsp
-			
 			//1. 사용자 입력 정보 추출
 			String seq = request.getParameter("seq");
 
