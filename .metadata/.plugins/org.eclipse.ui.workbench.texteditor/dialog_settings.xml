@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="AfterThrowing" key="selection"/>
+		<item value="Seq" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="seq"/>
+			<item value="getJdbcTemplate()"/>
 			<item value="afterThrowing"/>
 			<item value="exceptLog"/>
 			<item value="logAdvice"/>
 			<item value="OBJ"/>
 			<item value="expect"/>
 			<item value="BoardService"/>
-			<item value="로그인"/>
-			<item value="ddddd"/>
 		</list>
 		<list key="replacehistory">
+			<item value="jdbcTemplate"/>
 			<item value="boardList"/>
 			<item value="Properties"/>
 			<item value="Pro"/>

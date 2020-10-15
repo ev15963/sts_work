@@ -1,3 +1,1 @@
 INDEX VERSION 1.130+C:\sts_work\.metadata\.plugins\org.eclipse.jdt.core
-1347580217.index
-3617298083.index

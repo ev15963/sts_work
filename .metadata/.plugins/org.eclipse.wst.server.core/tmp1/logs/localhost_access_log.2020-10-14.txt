@@ -193,3 +193,7 @@
 0:0:0:0:0:0:0:1 - - [14/Oct/2020:19:57:34 +0900] "GET /BoardWeb/getBoard.jsp?seq=32 HTTP/1.1" 200 1348
 0:0:0:0:0:0:0:1 - - [14/Oct/2020:20:26:06 +0900] "GET /BoardWeb/logout_proc.jsp HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [14/Oct/2020:20:26:06 +0900] "GET /BoardWeb/login.jsp HTTP/1.1" 200 672
+0:0:0:0:0:0:0:1 - - [14/Oct/2020:20:54:07 +0900] "POST /BoardWeb/login_proc.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [14/Oct/2020:20:54:07 +0900] "GET /BoardWeb/getBoardList.jsp HTTP/1.1" 200 7869
+0:0:0:0:0:0:0:1 - - [14/Oct/2020:20:54:09 +0900] "GET /BoardWeb/getBoard.jsp?seq=30 HTTP/1.1" 200 1348
+0:0:0:0:0:0:0:1 - - [14/Oct/2020:20:54:13 +0900] "GET /BoardWeb/getBoard.jsp?seq=2 HTTP/1.1" 200 1313

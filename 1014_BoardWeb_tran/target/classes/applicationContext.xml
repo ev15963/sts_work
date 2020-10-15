@@ -12,11 +12,14 @@
 
 	<context:component-scan base-package="com.lsw.biz"></context:component-scan>
 
-	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+<!-- 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy> -->
+	
 <!-- 	<aop:aspect ref="afterThrowing"> -->
-<!-- 		<aop:after-throwing pointcut-ref="getPointcut" -->
-<!-- 			method="exceptLog" returning="returnObj" throwing="exceptObj" /> -->
+<!-- 		<aop:after-throwing pointcut-ref="allPointcut" -->
+<!-- 			method="exceptLog" throwing="exceptObj" /> -->
 <!-- 	</aop:aspect> -->
+	
+	
 
 <!-- 	<aop:config> -->
 <!-- 		<aop:pointcut id="allPointcut" -->
@@ -30,7 +33,7 @@
 <!-- 	</aop:config> -->
 	
 <!-- 	DataSource 설정 -->
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destory-method="close">
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="${jdbc.driver}" />
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
@@ -38,7 +41,7 @@
 	</bean>
 	
 <!-- 	transaction regisration -->
-	<bean id ="txmanager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	<bean id ="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	
@@ -49,15 +52,21 @@
 			<tx:method name="*" />
 		</tx:attributes>
 	</tx:advice>
-	
-	<aop:config>
-		<aop:pointcut expression="execution(8 com.lsw.biz.. *(..))" id="txPointcut" />
+
+<!-- 	<aop:config> -->
+<!-- 		<aop:pointcut expression="execution(* com.lsw.biz..*(..))" id="txPointcut" /> -->
 		
-		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
-	</aop:config>
+<!-- 		<aop:advisor pointcut-ref="txPointcut" advice-ref="txAdvice" /> -->
+<!-- 	</aop:config> -->
+	
+<!-- 	<bean id="log" class="com.lsw.biz.common.LogAdvice"></bean> -->
+	
+<!-- 	<aop:comfig> -->
+<!-- 		<aop:pointcut id="allPointcut" expression -->
+	
+<!-- 	</aop:comfig> -->
 
 <!-- 	<context:property-placeholder location="classpath:config/database.properties" /> -->
-					 -->
 
 	
 	

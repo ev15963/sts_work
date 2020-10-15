@@ -21,7 +21,7 @@ public class BoardServiceClient {
 		vo.setWriter("임시작성자");
 		vo.setContent("임시내용.....?");
 		
-//		boardService.insertBoard(vo);
+		boardService.insertBoard(vo);
 		
 		//4. 글 목록 검색 기능 테스트
 		List<BoardVO> boardList = boardService.getBoardList(vo);
