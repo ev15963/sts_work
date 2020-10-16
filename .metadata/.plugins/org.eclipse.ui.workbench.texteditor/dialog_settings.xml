@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Seq" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="seq"/>
-			<item value="getJdbcTemplate()"/>
-			<item value="afterThrowing"/>
-			<item value="exceptLog"/>
-			<item value="logAdvice"/>
-			<item value="OBJ"/>
-			<item value="expect"/>
-			<item value="BoardService"/>
+			<item value="point"/>
+			<item value="qualifying "/>
+			<item value="no"/>
+			<item value="final"/>
+			<item value="getBoardList.do"/>
+			<item value="getBoardList"/>
+			<item value="getBoard.do"/>
+			<item value="gwtBoard.do"/>
 		</list>
 		<list key="replacehistory">
 			<item value="jdbcTemplate"/>
@@ -29,7 +29,7 @@
 		<item value="288" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="185" key="DIALOG_X_ORIGIN"/>
+		<item value="193" key="DIALOG_X_ORIGIN"/>
 		<item value="657" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

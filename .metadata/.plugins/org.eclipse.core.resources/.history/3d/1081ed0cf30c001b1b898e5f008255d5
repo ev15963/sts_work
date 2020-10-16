@@ -1,8 +1,0 @@
-package com.lsw.biz.board.common;
-
-import org.aspectj.lang.annotation.Aspect;
-
-@Aspect
-public class PointCommon {
-	@Pointcut("execution(* com.lsw.biz..*Impl.*(..))")
-}
