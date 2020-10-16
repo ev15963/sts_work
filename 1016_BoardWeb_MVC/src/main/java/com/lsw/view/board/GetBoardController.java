@@ -36,6 +36,7 @@ public class GetBoardController implements Controller{
 		session.setAttribute("board", board);
 		
 //		response.sendRedirect("getBoard.jsp");
+		//view re297
 		return "getBoard";
 	}
 

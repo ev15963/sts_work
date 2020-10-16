@@ -1,0 +1,16 @@
+package com.lsw.view.board;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.lsw.view.controller.Controller;
+
+public class LogoutController implements Controller{
+
+	@Override
+	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
+		
+		return null;
+	}
+	
+}
