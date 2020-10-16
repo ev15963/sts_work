@@ -27,17 +27,16 @@
 				</tr>
 				<tr>
 					<td bgcolor="orange">작성자</td>
-					<td align="left">"${board.writer }"</td>
+					<td align="left">"${board.wirter }"</td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">내용</td>
 					<td align="left"><textarea name="content" cols="40" rows="10">
-					"${board.content }"
-					</textarea></td>
+	<%=board.getContent()%></textarea></td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">등록일</td>
-					<td align="left">"${board.regDate }"</td>
+					<td align="left">"${board.regdate }"</td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">조회수</td>
