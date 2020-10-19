@@ -4,12 +4,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.lsw.view.controller.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+import org.springframework.web.servlet.mvc.Controller;
 
 public class LogoutController implements Controller {
 
 	@Override
-	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
 		// else if (path.equals("/logout.do")) {
 		System.out.println("로그아웃처리");
 
@@ -21,7 +23,10 @@ public class LogoutController implements Controller {
 		// 2. 세션 종료후, 메인 화면으로 이동한다.
 		// response.sendRedirect("login.jsp");
 
-		return "login";
+//		return "login";
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("redirect:login.jsp"); //redirect:
+		return mav;
 	}
 
 }

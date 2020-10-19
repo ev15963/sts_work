@@ -5,7 +5,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.lsw.biz.user.UserVO;
 import com.lsw.biz.user.impl.UserDAO;
-import com.lsw.view.controller.Controller;
 
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;

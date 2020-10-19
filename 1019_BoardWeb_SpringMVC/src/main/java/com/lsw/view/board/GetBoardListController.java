@@ -8,7 +8,7 @@ import javax.servlet.http.HttpSession;
 
 import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
-import com.lsw.view.controller.Controller;
+//import com.lsw.view.controller.Controller;
 
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
@@ -35,8 +35,8 @@ public class GetBoardListController implements Controller{
 			
 			// 3. 검색 결과와 화면 정보를 ModelAndView에 저장하여 리턴
 			ModelAndView mav = new ModelAndView();
-			mav.addObject("boardList", boardList);
-			mav.setViewName("getBoardList.jsp");
+			mav.addObject("boardList", boardList); //Model 정보 저장
+			mav.setViewName("getBoardList");
 			return mav;
 	}
 

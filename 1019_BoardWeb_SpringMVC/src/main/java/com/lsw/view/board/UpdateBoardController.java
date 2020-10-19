@@ -3,14 +3,18 @@ package com.lsw.view.board;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.web.servlet.ModelAndView;
+
 import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
-import com.lsw.view.controller.Controller;
+
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
 
 public class UpdateBoardController implements Controller{
 
 	@Override
-	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("글수정처리");
 		
 		//updateBoard_proc.jsp
@@ -33,7 +37,10 @@ public class UpdateBoardController implements Controller{
 		//3. 화면 네이게이션
 //		response.sendRedirect("getBoardList.do"); //getBoardList.jsp -> getBoardList.do
 
-		return "getBoardList.do";
+//		return "getBoardList.do";
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("getBoardList.do"); //redirect:
+		return mav;
 	}
 
 	

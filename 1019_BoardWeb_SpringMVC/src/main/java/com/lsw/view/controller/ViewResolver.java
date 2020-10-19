@@ -1,5 +1,7 @@
 package com.lsw.view.controller;
 
+import org.springframework.web.servlet.ModelAndView;
+
 public class ViewResolver {
 	private String prefix;
 	private String suffix;
@@ -18,7 +20,7 @@ public class ViewResolver {
 	}
 	
 	//dispatcherServlet의 process() 내에서 호출
-	public String getView(String viewName) {
+	public String getView(ModelAndView viewName) {
 		return prefix + viewName + suffix;
 	}
 }

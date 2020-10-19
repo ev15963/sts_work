@@ -3,14 +3,18 @@ package com.lsw.view.board;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+//import org.springframework.web.servlet.ModelAndView;
+
 import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
-import com.lsw.view.controller.Controller;
+
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
 
 public class DeleteBoardController implements Controller{
 
 	@Override
-	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
 //		else if (path.equals("/deleteBoard.do")) {
 			System.out.println("글삭제처리");
 			
@@ -29,6 +33,9 @@ public class DeleteBoardController implements Controller{
 
 			//3. 화면 네비게이션
 //			response.sendRedirect("getBoardList.do"); //getBoardList.jsp -> getBoardList.do
-			return "getBoardList.do";
+//			return "getBoardList.do";
+			ModelAndView mav = new ModelAndView();
+			mav.setViewName("getBoardList.do");
+			return mav;
 	}
 }

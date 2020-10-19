@@ -8,12 +8,15 @@ import javax.servlet.http.HttpSession;
 
 import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
-import com.lsw.view.controller.Controller;
+//import com.lsw.view.controller.Controller;
+
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
 
 public class GetBoardController implements Controller{
 
 	@Override
-	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("글상세조회처리");
 		
 		//getBoard.jsp 내용 가져오기
@@ -32,12 +35,17 @@ public class GetBoardController implements Controller{
 		BoardVO board = bDAO.getBoard(vo);
 		
 		//3. 검색결과 세션에 저장하고 상세 화면으로 이동
-		HttpSession session = request.getSession();
-		session.setAttribute("board", board);
+//		HttpSession session = request.getSession();
+//		session.setAttribute("board", board);
 		
 //		response.sendRedirect("getBoard.jsp");
 		//view re297
-		return "getBoard";
+//		return "getBoard";
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("board", board);	//Mode1 정보 저장
+		mav.setViewName("getBoard");	//View 정보 저장
+		return mav;
 	}
 
 	

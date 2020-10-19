@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="1016_BoardWeb_MVC"/>
-<aop-project name="1015_BoardWeb_Model2"/>
+<aop-project name="1019_BoardWeb_SpringMVC"/>
 <aop-project name="BoardWeb_DI_boardService"/>
 </aop-reference-model>
