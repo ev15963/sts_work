@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="polymorphism.di.Speaker"/>
-<fullyQualifiedTypeName name="di.anno.Speaker"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
-<fullyQualifiedTypeName name="javax.annotation.Resource"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
-<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
-<fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="com.lsw.biz.board.BoardService"/>
-<fullyQualifiedTypeName name="com.lsw.biz.board.impl.JDBCUtil"/>
-<fullyQualifiedTypeName name="org.springframework.context.support.GenericApplicationContext"/>
-<fullyQualifiedTypeName name="com.lsw.biz.user.impl.UserDAO"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
 <fullyQualifiedTypeName name="java.awt.Container"/>
@@ -58,6 +44,20 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
 <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Before"/>
-<fullyQualifiedTypeName name="com.lsw.biz.user.UserVO"/>
 <fullyQualifiedTypeName name="com.lsw.biz.user.UserService"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="com.lsw.biz.user.UserVO"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.lsw.view.controller.LoginController"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ViewResolver"/>
+<fullyQualifiedTypeName name="com.lsw.view.controller.HandlerMapping"/>
+<fullyQualifiedTypeName name="com.lsw.view.controller.ViewResolver"/>
+<fullyQualifiedTypeName name="javax.tools.JavaFileManager.Location"/>
+<fullyQualifiedTypeName name="com.lsw.view.board.UpdateBoardController"/>
+<fullyQualifiedTypeName name="com.lsw.view.board.DeleteBoardController"/>
+<fullyQualifiedTypeName name="com.lsw.view.controller.Controller"/>
+<fullyQualifiedTypeName name="com.lsw.view.board.GetBoardListController"/>
 </qualifiedTypeNameHistroy>
