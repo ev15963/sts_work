@@ -2,10 +2,7 @@
 <%@ page import="com.lsw.biz.board.BoardVO"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 
-<%
-	//세션에  저장된 게시글 정보를 꺼낸다.
-	BoardVO board = (BoardVO) session.getAttribute("board");
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,21 +24,21 @@
 				</tr>
 				<tr>
 					<td bgcolor="orange">작성자</td>
-					<td align="left">"${board.writer }"</td>
+					<td align="left">${board.writer }</td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">내용</td>
 					<td align="left"><textarea name="content" cols="40" rows="10">
-					"${board.content }"
+					${board.content }
 					</textarea></td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">등록일</td>
-					<td align="left">"${board.regDate }"</td>
+					<td align="left">${board.regDate }</td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">조회수</td>
-					<td align="left">"${board.cnt }"</td>
+					<td align="left">${board.cnt }</td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center"><input type="submit"
