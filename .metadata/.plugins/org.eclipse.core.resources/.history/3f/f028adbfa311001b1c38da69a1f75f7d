@@ -22,18 +22,13 @@
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 
-<!-- UTF-8 Configuration -->
+<!-- DispatcherServlet Registration -->
 <filter>
 	<filter-name>characterEncoding</filter-name>
 	<filter-name>org.springframework.web.filter.CharacterEncodingFilter</filter-name>
 	<init-param>
-		<param-name>forceEncoding</param-name>
-		<param-value>true</param-value>
-	</init-param>
-	<init-param>
 		<param-name>encoding</param-name>
-<!-- 		<param-value>UTF-8</param-value> -->
-		<param-value>EUC-KR</param-value>
+		<param-value>UTF-8</param-value>
 	</init-param>
 </filter>
 
@@ -42,7 +37,6 @@
 	<url-pattern>*.do</url-pattern>
 </filter-mapping>
 
-<!-- DispatcherServlet Registration -->
 <servlet>
 <servlet-name>action</servlet-name>
 <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

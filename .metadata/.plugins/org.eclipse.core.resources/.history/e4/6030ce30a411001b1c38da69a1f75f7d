@@ -22,7 +22,7 @@
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 
-<!-- UTF-8 Configuration -->
+<!-- UTF-8 Registration -->
 <filter>
 	<filter-name>characterEncoding</filter-name>
 	<filter-name>org.springframework.web.filter.CharacterEncodingFilter</filter-name>
