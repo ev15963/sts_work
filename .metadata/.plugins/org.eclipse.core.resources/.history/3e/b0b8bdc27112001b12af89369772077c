@@ -33,10 +33,10 @@ public class InsertBoardController{
 //			String content=request.getParameter("content");
 
 			//2. DB 연동 처리
-//			BoardVO vo = new BoardVO();
-//			vo.setTitle(title);
-//			vo.setWriter(writer);
-//			vo.setContent(content);
+			BoardVO vo = new BoardVO();
+			vo.setTitle(title);
+			vo.setWriter(writer);
+			vo.setContent(content);
 
 			BoardDAO bDAO = new BoardDAO();
 			bDAO.insertBoard(vo);
