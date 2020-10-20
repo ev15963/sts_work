@@ -1,20 +1,35 @@
 package com.lsw.view.board;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
 
 @Controller
+@SessionAttributes("board")
 public class BoardController {
 //	com.lsw.view.board
 	
+	@ModelAttribute("conditionMap")
+	public Map<String, String> searchConditionMap() {
+		Map<String, String> conditionMap = new HashMap<String, String>();
+		conditionMap.put("제목", "TITLE");
+		conditionMap.put("내용", "CONTENT");
+		
+		return conditionMap;
+	}
+	
+	
 //	InsertBoardController.java 글등록
-	@RequestMapping(value="/insertBoard.do")
+	@RequestMapping("/insertBoard.do") //value=
 	public String insertBoard(BoardVO vo, BoardDAO boardDAO) { //HttpServletRequest request
 //		else if (path.equals("/insertBoard.do")) { // loginBoard.do -> insertBoard.do
 			System.out.println("글등록처리 통합");
@@ -24,8 +39,15 @@ public class BoardController {
 	}
 //	UpdateBoardController.java 글수정
 	@RequestMapping("/updateBoard.do")
-	public String updateBoard(BoardVO vo, BoardDAO boardDAO) {
+	public String updateBoard(@ModelAttribute("board") BoardVO vo, BoardDAO boardDAO) {
 		System.out.println("글수정처리 통합");
+//		System.out.println("작성자 이름 : "+vo.getVOwriter());
+		System.out.println("번호 : "+vo.getSeq());
+		System.out.println("제목 : "+vo.getTitle());
+		System.out.println("작성자 : "+vo.getWriter());
+		System.out.println("내용 : "+vo.getContent());
+		System.out.println("등록일 : "+vo.getRegDate());
+		System.out.println("조회수 : "+vo.getCnt());
 		
 		boardDAO.updateBoard(vo);
 		

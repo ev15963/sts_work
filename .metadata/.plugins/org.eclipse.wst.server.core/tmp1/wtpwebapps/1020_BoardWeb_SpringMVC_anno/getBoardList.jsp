@@ -32,10 +32,22 @@
 			<table boarder="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
 					<td align="right">
+<!-- 					BoardController의 @ModerAttribute : 검색 조건 목록 설정 -->
 						<select name="searchCondition">
-								<option value="TITLE">제목
-								<option value="CONTENT">내용
+							<c:forEach items="${conditionMap }" var="option">
+								<option value="${option.value }">${option.key }
+							</c:forEach>
+							
+ 								<option value="TITLE">제목
+ 								<option value="CONTENT">내용
 						</select>
+						
+<!-- 						기존 검색 -->
+<!-- 						<select name="searchCondition"> -->
+<!-- 								<option value="TITLE">제목 -->
+<!-- 								<option value="CONTENT">내용 -->
+<!-- 						</select> -->
+						
 						<input name="searchKeyword" type="text" />
 						<input type="submit" value="검색" />
 					</td>
@@ -57,7 +69,7 @@
 			<tr>
 				<td>${board.seq }</td>
 				<td align="left"><a href="getBoard.do?seq=${board.seq }"> ${board.title }</a></td>
-				<td>${ board.writer}</td>
+				<td>${board.writer}</td>
 				<td>${board.regDate }</td>
 				<td>${board.cnt }</td>
 			</tr>
