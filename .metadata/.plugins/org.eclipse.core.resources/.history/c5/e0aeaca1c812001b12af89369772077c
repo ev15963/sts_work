@@ -17,7 +17,7 @@ import com.lsw.biz.board.impl.BoardDAO;
 @SessionAttributes("board")
 public class BoardController {
 //	com.lsw.view.board
-	//검색 조건 목록 설정
+	
 	@ModelAttribute("conditionMap")
 	public Map<String, String> searchConditionMap() {
 		Map<String, String> conditionMap = new HashMap<String, String>();
@@ -78,11 +78,11 @@ public class BoardController {
 	
 //	GetBoardListController.java 글목록 검색
 	@RequestMapping("/getBoardList.do")
-	public String getBoardList(BoardVO vo, BoardDAO boardDAO, Model model) {
-//			@RequestParam(value="searchCondition", 
-//		defaultValue="TITLE", required=false) String condition, 
-//		@RequestParam(value="searchKeyword", defaultValue="", required=false)
-//		String keyword, BoardDAO boardDAO, Model model) {
+	public String getBoardList( //BoardVO vo, BoardDAO boardDAO, Model model) {
+			@RequestParam(value="searchCondition", 
+		defaultValue="TITLE", required=false) String condition, 
+		@RequestParam(value="searchKeyword", defaultValue="", required=false)
+		String keyword, BoardDAO boardDAO, Model model) {
 
 //		System.out.println("검색조건 : "+condition);
 //		System.out.println("검색단어 : "+keyword);
