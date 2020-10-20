@@ -65,7 +65,7 @@ public class BoardController {
 		System.out.println("검색단어 : "+keyword);
 //		else if (path.equals("/getBoardList.do")) {
 			//model  정보 저장
-//		model.addAttribute("boardList", boardDAO.getBoardList(vo));
+		model.addAttribute("boardList", boardDAO.getBoardList(vo));
 		return "getBoardList.jsp";
 		
 	}

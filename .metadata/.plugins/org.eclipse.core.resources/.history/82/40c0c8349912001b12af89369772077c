@@ -59,17 +59,17 @@ public class BoardController {
 	public String getBoardList(@RequestParam(value="searchCondition", 
 		defaultValue="TITLE", required=false) String condition, 
 		@RequestParam(value="searchKeyword", defaultValue="", required=false)
-		String keyword, BoardDAO boardDAO, Model model) {
+	String keyword, BoardDAO boardDAO, Model model) {
 
 		System.out.println("검색조건 : "+condition);
 		System.out.println("검색단어 : "+keyword);
 //		else if (path.equals("/getBoardList.do")) {
 			//model  정보 저장
-//		model.addAttribute("boardList", boardDAO.getBoardList(vo));
+		model.addAttribute("boardList", boardDAO.getBoardList(vo));
 		return "getBoardList.jsp";
 		
 	}
 	
-	
+	@RequestParam
 	
 }

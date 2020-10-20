@@ -175,3 +175,9 @@
 0:0:0:0:0:0:0:1 - - [20/Oct/2020:14:16:03 +0900] "GET /1020_BoardWeb_SpringMVC_anno/login.jsp HTTP/1.1" 200 688
 0:0:0:0:0:0:0:1 - - [20/Oct/2020:14:16:10 +0900] "POST /1020_BoardWeb_SpringMVC_anno/login.do HTTP/1.1" 200 697
 0:0:0:0:0:0:0:1 - - [20/Oct/2020:14:16:15 +0900] "POST /1020_BoardWeb_SpringMVC_anno/login.do HTTP/1.1" 200 697
+127.0.0.1 - - [20/Oct/2020:14:41:54 +0900] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [20/Oct/2020:14:41:55 +0900] "GET /1020_BoardWeb_SpringMVC_anno/login.jsp HTTP/1.1" 200 688
+0:0:0:0:0:0:0:1 - - [20/Oct/2020:14:42:12 +0900] "POST /1020_BoardWeb_SpringMVC_anno/login.do HTTP/1.1" 200 9528
+0:0:0:0:0:0:0:1 - - [20/Oct/2020:14:42:14 +0900] "GET /1020_BoardWeb_SpringMVC_anno/getBoard.do?seq=37 HTTP/1.1" 200 9528
+0:0:0:0:0:0:0:1 - - [20/Oct/2020:14:42:17 +0900] "GET /1020_BoardWeb_SpringMVC_anno/getBoard.do?seq=37 HTTP/1.1" 200 9528
+0:0:0:0:0:0:0:1 - - [20/Oct/2020:14:42:18 +0900] "GET /1020_BoardWeb_SpringMVC_anno/getBoard.do?seq=37 HTTP/1.1" 200 9528
