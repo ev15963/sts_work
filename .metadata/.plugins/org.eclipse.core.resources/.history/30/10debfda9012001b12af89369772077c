@@ -9,10 +9,10 @@ import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
 //import com.lsw.view.controller.Controller;
 
-//@Controller
+@Controller
 public class InsertBoardController{
 
-//	@RequestMapping(value="/insertBoard.do")
+	@RequestMapping(value="/insertBoard.do")
 	public String insertBoard(BoardVO vo, BoardDAO boardDAO) { //HttpServletRequest request
 //		else if (path.equals("/insertBoard.do")) { // loginBoard.do -> insertBoard.do
 			System.out.println("글등록처리");

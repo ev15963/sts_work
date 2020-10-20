@@ -9,10 +9,10 @@ import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
 //import com.lsw.view.controller.Controller;
 
-//@Controller
+@Controller
 public class GetBoardListController{
 	
-//	@RequestMapping("/getBoardList.do")
+	@RequestMapping("/getBoardList.do")
 	public ModelAndView getBoardList(BoardVO vo, BoardDAO boardDAO, ModelAndView mav) {
 //		else if (path.equals("/getBoardList.do")) {
 			System.out.println("글목록검색처리");

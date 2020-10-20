@@ -9,7 +9,7 @@ import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
 //import com.lsw.view.controller.Controller;
 
-//@Controller
+@Controller
 public class GetBoardController {
 
 //	@RequestMapping("/getBoard.do")
