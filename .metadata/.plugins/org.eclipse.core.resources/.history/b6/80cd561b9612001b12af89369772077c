@@ -42,12 +42,12 @@ public class BoardController {
 	
 //	GetBoardController.java 글상세조회
 	@RequestMapping("/getBoard.do")
-	public String getBoard(BoardVO vo, BoardDAO boardDAO, Model model) {
+	public ModelAndView getBoard(BoardVO vo, BoardDAO boardDAO, Model model) {
 		System.out.println("글상세조회처리 통합");
 		
 		//Model 정보 저장
-		model.addAttribute("boardList", boardDAO.getBoardList(vo));
-		return "getBoardList.jsp";
+		model.addAllAttribute("boardList", boardDAO.getBoardList(vo));
+		
 //		mav.addObject("board", boardDAO.getBoard(vo));	//Mode1 정보 저장
 //		mav.setViewName("getBoard.jsp");	//View 정보 저장
 //		return mav;

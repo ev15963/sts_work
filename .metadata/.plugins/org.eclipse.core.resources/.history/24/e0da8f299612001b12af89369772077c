@@ -42,7 +42,7 @@ public class BoardController {
 	
 //	GetBoardController.java 글상세조회
 	@RequestMapping("/getBoard.do")
-	public String getBoard(BoardVO vo, BoardDAO boardDAO, Model model) {
+	public ModelAndView getBoard(BoardVO vo, BoardDAO boardDAO, Model model) {
 		System.out.println("글상세조회처리 통합");
 		
 		//Model 정보 저장
