@@ -69,8 +69,8 @@ public class BoardController {
 		System.out.println("글상세조회처리 통합");
 		
 		//Model 정보 저장
-		model.addAttribute("boardList", boardDAO.getBoardList(vo));
-		return "getBoardList.jsp";
+		model.addAttribute("board", boardDAO.getBoardList(vo)); //List
+		return "getBoard.jsp";
 //		mav.addObject("board", boardDAO.getBoard(vo));	//Mode1 정보 저장
 //		mav.setViewName("getBoard.jsp");	//View 정보 저장
 //		return mav;
@@ -78,16 +78,17 @@ public class BoardController {
 	
 //	GetBoardListController.java 글목록 검색
 	@RequestMapping("/getBoardList.do")
-	public String getBoardList(@RequestParam(value="searchCondition", 
-		defaultValue="TITLE", required=false) String condition, 
-		@RequestParam(value="searchKeyword", defaultValue="", required=false)
-		String keyword, BoardDAO boardDAO, Model model) {
+	public String getBoardList(BoardVO vo, BoardDAO boardDAO, Model model) {
+//			@RequestParam(value="searchCondition", 
+//		defaultValue="TITLE", required=false) String condition, 
+//		@RequestParam(value="searchKeyword", defaultValue="", required=false)
+//		String keyword, BoardDAO boardDAO, Model model) {
 
-		System.out.println("검색조건 : "+condition);
-		System.out.println("검색단어 : "+keyword);
+//		System.out.println("검색조건 : "+condition);
+//		System.out.println("검색단어 : "+keyword);
 //		else if (path.equals("/getBoardList.do")) {
 			//model  정보 저장
-//		model.addAttribute("boardList", boardDAO.getBoardList(vo));
+		model.addAttribute("boardList", boardDAO.getBoardList(vo));
 		return "getBoardList.jsp";
 		
 	}

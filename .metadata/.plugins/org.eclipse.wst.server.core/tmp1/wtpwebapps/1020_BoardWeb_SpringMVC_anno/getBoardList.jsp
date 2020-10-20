@@ -28,18 +28,18 @@
 		</h3>
 
 		<!-- 검색 시작 -->
-		<form action="getBoardList.do" method="post">
+		<form action="getBoardList.jsp" method="post">
 			<table boarder="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
 					<td align="right">
 <!-- 					BoardController의 @ModerAttribute : 검색 조건 목록 설정 -->
 						<select name="searchCondition">
-							<c:forEach items="${conditionMap }" var="option">
+							<c:forEach var="option" items="${conditionMap }">
 								<option value="${option.value }">${option.key }
 							</c:forEach>
 							
- 								<option value="TITLE">제목
- 								<option value="CONTENT">내용
+<!--  								<option value="TITLE">제목 -->
+<!--  								<option value="CONTENT">내용 -->
 						</select>
 						
 <!-- 						기존 검색 -->
@@ -64,7 +64,7 @@
 				<th bgcolor="orange" width="150">등록일</th>
 				<th bgcolor="orange" width="100">조회수</th>
 			</tr>
-
+			
 			<c:forEach var="board" items="${boardList }">
 			<tr>
 				<td>${board.seq }</td>
