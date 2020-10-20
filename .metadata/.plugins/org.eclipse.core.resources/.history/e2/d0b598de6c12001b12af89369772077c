@@ -10,15 +10,13 @@ import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
 //import com.lsw.view.controller.Controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
-//import org.springframework.web.servlet.mvc.Controller;
+import org.springframework.web.servlet.mvc.Controller;
 
-@Controller
-public class GetBoardController {
+public class GetBoardController implements Controller{
 
-
-	public void getBoard(HttpServletRequest request) {
+	@Override
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("글상세조회처리");
 		
 		//getBoard.jsp 내용 가져오기
@@ -44,10 +42,10 @@ public class GetBoardController {
 		//view re297
 //		return "getBoard";
 		
-//		ModelAndView mav = new ModelAndView();
-//		mav.addObject("board", board);	//Mode1 정보 저장
-//		mav.setViewName("getBoard");	//View 정보 저장
-//		return mav;
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("board", board);	//Mode1 정보 저장
+		mav.setViewName("getBoard");	//View 정보 저장
+		return mav;
 	}
 
 	

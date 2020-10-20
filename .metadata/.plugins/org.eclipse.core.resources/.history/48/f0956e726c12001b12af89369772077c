@@ -10,14 +10,13 @@ import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
 //import com.lsw.view.controller.Controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
-//import org.springframework.web.servlet.mvc.Controller;
+import org.springframework.web.servlet.mvc.Controller;
 
-@Controller
-public class GetBoardListController{
+public class GetBoardListController implements Controller{
 
-	public void getBoardList(HttpServletRequest request) {
+	@Override
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
 //		else if (path.equals("/getBoardList.do")) {
 			System.out.println("글목록검색처리");
 			
@@ -35,10 +34,10 @@ public class GetBoardListController{
 //			return "getBoardList";
 			
 			// 3. 검색 결과와 화면 정보를 ModelAndView에 저장하여 리턴
-//			ModelAndView mav = new ModelAndView();
-//			mav.addObject("boardList", boardList); //Model 정보 저장
-//			mav.setViewName("getBoardList");
-//			return mav;
+			ModelAndView mav = new ModelAndView();
+			mav.addObject("boardList", boardList); //Model 정보 저장
+			mav.setViewName("getBoardList");
+			return mav;
 	}
 
 }
