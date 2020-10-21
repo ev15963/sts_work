@@ -16,10 +16,13 @@ public class UserServiceImpl implements UserService{
 	@Autowired //Ãß°¡
 	private UserDAO UserDAO;
 	
-	
-	public void setUserDAO(UserDAO userDAO) {
-		this.UserDAO = userDAO;
+	public UserServiceImpl() {
+		// TODO Auto-generated constructor stub
 	}
+	
+//	public void setUserDAO(UserDAO userDAO) {
+//		this.UserDAO = userDAO;
+//	}
 	
 	@Override
 	public UserVO getUser(UserVO vo) {

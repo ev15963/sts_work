@@ -40,6 +40,11 @@
 		<property name="password" value="${jdbc.password}" />
 	</bean>
 	
+	<!-- Spring JdbcTemplate Configuration  -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
 <!-- 	transaction regisration -->
 	<bean id ="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
@@ -52,6 +57,12 @@
 			<tx:method name="*" />
 		</tx:attributes>
 	</tx:advice>
+	
+		<!-- Transaction Advisor Configuration -->
+	<aop:config>
+		<aop:pointcut expression="execution(* com.lsw.biz..*Impl.*(..))" id="txPointcut"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+	</aop:config>
 
 <!-- 	<aop:config> -->
 <!-- 		<aop:pointcut expression="execution(* com.lsw.biz..*(..))" id="txPointcut" /> -->
@@ -71,7 +82,7 @@
 	
 	
 <!-- 	Spring jdbc 설정 -->
-	<bean class="org.springframework.jdbc.core.JdbcTemplate" id="jdbcTemplate">
-		<property name="dataSource" ref="dataSource"/>
-	</bean>
+<!-- 	<bean class="org.springframework.jdbc.core.JdbcTemplate" id="jdbcTemplate"> -->
+<!-- 		<property name="dataSource" ref="dataSource"/> -->
+<!-- 	</bean> -->
 </beans>

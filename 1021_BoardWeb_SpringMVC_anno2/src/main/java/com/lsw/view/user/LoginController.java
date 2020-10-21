@@ -12,6 +12,11 @@ import com.lsw.biz.user.impl.UserDAO;
 
 @Controller
 public class LoginController {
+	
+	public LoginController() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
 	public String loginView(@ModelAttribute("user") UserVO vo) {
 		System.out.println("로그인 처리 이동");
