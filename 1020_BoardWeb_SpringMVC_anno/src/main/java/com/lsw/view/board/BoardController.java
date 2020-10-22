@@ -29,7 +29,7 @@ public class BoardController {
 	
 	
 //	InsertBoardController.java 글등록
-	@RequestMapping("/insertBoard.do") //value=
+	@RequestMapping(value="/insertBoard.do") //value=
 	public String insertBoard(BoardVO vo, BoardDAO boardDAO) { //HttpServletRequest request
 //		else if (path.equals("/insertBoard.do")) { // loginBoard.do -> insertBoard.do
 			System.out.println("글등록처리 통합");
@@ -42,12 +42,12 @@ public class BoardController {
 	public String updateBoard(@ModelAttribute("board") BoardVO vo, BoardDAO boardDAO) { //@ModelAttribute("board") 
 		System.out.println("글수정처리 통합");
 //		System.out.println("작성자 이름 : "+vo.getVOwriter());
-//		System.out.println("번호 : "+vo.getSeq());
-//		System.out.println("제목 : "+vo.getTitle());
-//		System.out.println("작성자 : "+vo.getWriter());
-//		System.out.println("내용 : "+vo.getContent());
-//		System.out.println("등록일 : "+vo.getRegDate());
-//		System.out.println("조회수 : "+vo.getCnt());
+		System.out.println("번호 : "+vo.getSeq());
+		System.out.println("제목 : "+vo.getTitle());
+		System.out.println("작성자 : "+vo.getWriter());
+		System.out.println("내용 : "+vo.getContent());
+		System.out.println("등록일 : "+vo.getRegDate());
+		System.out.println("조회수 : "+vo.getCnt());
 		
 		boardDAO.updateBoard(vo);
 		
@@ -55,7 +55,7 @@ public class BoardController {
 	}
 	
 //	DeleteBoardController.java 글삭제
-	@RequestMapping("/deleteBoard.do")
+	@RequestMapping(value="/deleteBoard.do")
 	public String deleteBoard (BoardVO vo, BoardDAO boardDAO) {
 			System.out.println("글삭제처리 통합");
 			
@@ -64,7 +64,7 @@ public class BoardController {
 	}
 	
 //	GetBoardController.java 글상세조회
-	@RequestMapping("/getBoard.do")
+	@RequestMapping(value="/getBoard.do")
 	public String getBoard(BoardVO vo, BoardDAO boardDAO, Model model) {
 		System.out.println("글상세조회처리 통합");
 		
@@ -77,7 +77,7 @@ public class BoardController {
 	}
 	
 //	GetBoardListController.java 글목록 검색
-	@RequestMapping("/getBoardList.do")
+	@RequestMapping(value="/getBoardList.do")
 	public String getBoardList(//BoardVO vo, BoardDAO boardDAO, Model model) {
 			@RequestParam(value="searchCondition", 
 		defaultValue="TITLE", required=false) String condition, 
