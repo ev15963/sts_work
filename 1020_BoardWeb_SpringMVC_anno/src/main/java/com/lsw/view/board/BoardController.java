@@ -39,8 +39,8 @@ public class BoardController {
 	}
 //	UpdateBoardController.java 글수정
 	@RequestMapping("/updateBoard.do")
-	public String updateBoard(BoardVO vo, BoardDAO boardDAO) { //@ModelAttribute("board") 
-//		System.out.println("글수정처리 통합");
+	public String updateBoard(@ModelAttribute("board") BoardVO vo, BoardDAO boardDAO) { //@ModelAttribute("board") 
+		System.out.println("글수정처리 통합");
 //		System.out.println("작성자 이름 : "+vo.getVOwriter());
 //		System.out.println("번호 : "+vo.getSeq());
 //		System.out.println("제목 : "+vo.getTitle());
@@ -69,7 +69,7 @@ public class BoardController {
 		System.out.println("글상세조회처리 통합");
 		
 		//Model 정보 저장
-		model.addAttribute("board", boardDAO.getBoardList(vo)); //List
+		model.addAttribute("board", boardDAO.getBoard(vo)); //List
 		return "getBoard.jsp";
 //		mav.addObject("board", boardDAO.getBoard(vo));	//Mode1 정보 저장
 //		mav.setViewName("getBoard.jsp");	//View 정보 저장
@@ -78,14 +78,14 @@ public class BoardController {
 	
 //	GetBoardListController.java 글목록 검색
 	@RequestMapping("/getBoardList.do")
-	public String getBoardList(BoardVO vo, BoardDAO boardDAO, Model model) {
-//			@RequestParam(value="searchCondition", 
-//		defaultValue="TITLE", required=false) String condition, 
-//		@RequestParam(value="searchKeyword", defaultValue="", required=false)
-//		String keyword, BoardDAO boardDA O, Model model) {
-//
-//		System.out.println("검색조건 : "+condition);
-//		System.out.println("검색단어 : "+keyword);
+	public String getBoardList(//BoardVO vo, BoardDAO boardDAO, Model model) {
+			@RequestParam(value="searchCondition", 
+		defaultValue="TITLE", required=false) String condition, 
+		@RequestParam(value="searchKeyword", defaultValue="", required=false)
+		String keyword, BoardVO vo, BoardDAO boardDAO, Model model) {
+
+		System.out.println("검색조건 : "+condition);
+		System.out.println("검색단어 : "+keyword);
 //		else if (path.equals("/getBoardList.do")) {
 			//model  정보 저장
 		model.addAttribute("boardList", boardDAO.getBoardList(vo));

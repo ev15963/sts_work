@@ -128,6 +128,7 @@
 			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\admin\Downloads\BoardWeb_SpringMVC_anno.zip"/>
 			<item value="C:\Users\admin\Downloads\BoardWeb_SpringMVC_anno_controller.zip"/>
 			<item value="C:\Users\admin\Downloads\BoardWeb_SpringMVC.zip"/>
 			<item value="C:\Users\admin\Downloads\BoardWeb_SpringMVC_integration.zip"/>
@@ -135,11 +136,15 @@
 			<item value="C:\Users\admin\Desktop\1006_BoardWeb_DI_new.zip"/>
 		</list>
 	</section>
+	<section name="ResourceNavigator">
+		<item value="" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
 	<section name="SaveAsDialogSettings">
 		<item value="525" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="580" key="DIALOG_HEIGHT"/>
-		<item value="250" key="DIALOG_X_ORIGIN"/>
-		<item value="8" key="DIALOG_Y_ORIGIN"/>
+		<item value="445" key="DIALOG_X_ORIGIN"/>
+		<item value="65" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

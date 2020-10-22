@@ -10,10 +10,34 @@
 
 	<context:component-scan base-package="com.lsw.view">
 	</context:component-scan>
-	<mvc:annotation-driven></mvc:annotation-driven>
+	<!-- <mvc:annotation-driven></mvc:annotation-driven> -->
+
+	<!--  파일 업로드 설정 -->
+	<bean id="mutipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="100000"></property>
+	</bean>
+
+	<!-- MessageSource 등록 -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>message.messageSource</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- LocaleResolver 등록 -->
+	<bean id="localResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"></bean>
+	
+	<!-- LocalChangeIntercetor 등록 -->
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"
+	</mvc:interceptors>
 	
 	<!-- 파일 업로드 설정 -->
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="100000" />
 	</bean>
 	<!-- handlermapping 등록 -->
