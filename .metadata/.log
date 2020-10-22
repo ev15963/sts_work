@@ -714,3 +714,15 @@ java.nio.file.FileSystemException: C:\sts_work\BoardWeb_SpringMVC_anno_controlle
 !MESSAGE Could not delete: C:\sts_work\BoardWeb_SpringMVC_anno_controller\src\main.
 !SUBENTRY 4 org.eclipse.core.filesystem 4 273 2020-10-22 19:20:42.301
 !MESSAGE Could not delete: C:\sts_work\BoardWeb_SpringMVC_anno_controller\src.
+
+!ENTRY org.eclipse.jface.text 2 0 2020-10-22 21:03:13.828
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2020-10-22 21:03:13.855
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-10-22 21:07:48.693
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-10-22 21:07:48.739
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!

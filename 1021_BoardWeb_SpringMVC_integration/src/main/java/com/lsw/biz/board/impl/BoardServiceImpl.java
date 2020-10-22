@@ -12,8 +12,8 @@ import com.lsw.biz.board.BoardVO;
 public class BoardServiceImpl implements BoardService{
 
 	@Autowired
-//	private BoardDAO boardDAO;
-	private BoardDAOSpring boardDAO;
+	private BoardDAO boardDAO;
+//	private BoardDAOSpring boardDAO;
 	
 	public BoardServiceImpl() {
 	}
