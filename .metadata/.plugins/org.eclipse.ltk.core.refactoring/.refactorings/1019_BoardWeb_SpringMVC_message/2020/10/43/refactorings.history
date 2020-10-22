@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;messageSource_en.properties&apos; to &apos;messageSource_en.properties&apos;&#x0D;&#x0A;- Original project: &apos;1019_BoardWeb_SpringMVC_message&apos;&#x0D;&#x0A;- Destination element: &apos;messageSource_en.properties&apos;&#x0D;&#x0A;- Original element: &apos;messageSource_en.properties&apos;" description="Copy file" element1="messageSource_en.properties" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1603334452809" target="/1019_BoardWeb_SpringMVC_message/messageSource_en.properties" units="0" version="1.0"/>
+</session>
