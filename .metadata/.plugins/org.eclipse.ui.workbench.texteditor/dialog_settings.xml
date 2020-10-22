@@ -6,20 +6,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="boardList" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="ojdbc8"/>
+			<item value="ojdbc8.jar"/>
+			<item value="boardService"/>
+			<item value="board"/>
 			<item value="parse"/>
 			<item value="update"/>
 			<item value="init"/>
 			<item value="getBoardList.do"/>
-			<item value="getBoard"/>
-			<item value="getBoard.do"/>
-			<item value="id"/>
-			<item value="lifecycle"/>
 		</list>
 		<list key="replacehistory">
 			<item value="jdbcTemplate"/>

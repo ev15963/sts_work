@@ -1,0 +1,5 @@
+package com.freeflux.biz.board.impl;
+
+public @interface Repository {
+
+}

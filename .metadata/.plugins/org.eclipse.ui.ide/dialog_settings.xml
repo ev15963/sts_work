@@ -128,6 +128,9 @@
 			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\admin\Downloads\BoardWeb_SpringMVC_anno_controller.zip"/>
+			<item value="C:\Users\admin\Downloads\BoardWeb_SpringMVC.zip"/>
+			<item value="C:\Users\admin\Downloads\BoardWeb_SpringMVC_integration.zip"/>
 			<item value="C:\Users\admin\Downloads\1006_BoardWeb_DI_new_1014.zip"/>
 			<item value="C:\Users\admin\Desktop\1006_BoardWeb_DI_new.zip"/>
 		</list>
