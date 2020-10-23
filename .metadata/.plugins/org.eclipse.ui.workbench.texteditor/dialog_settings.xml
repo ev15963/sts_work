@@ -6,22 +6,24 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="seq" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="file"/>
+			<item value="boardDAO."/>
+			<item value="boardDAO"/>
+			<item value="logout"/>
+			<item value="getBoardList()"/>
+			<item value="getBoardList"/>
 			<item value="seq"/>
 			<item value="input"/>
-			<item value="pool"/>
-			<item value="file"/>
-			<item value="commons"/>
-			<item value="fileupload"/>
-			<item value="ojdbc8"/>
-			<item value="ojdbc8.jar"/>
 		</list>
 		<list key="replacehistory">
+			<item value="boardService."/>
+			<item value="boardService"/>
 			<item value="jdbcTemplate"/>
 			<item value="boardList"/>
 			<item value="Properties"/>
@@ -33,7 +35,7 @@
 		<item value="288" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="657" key="DIALOG_X_ORIGIN"/>
-		<item value="462" key="DIALOG_Y_ORIGIN"/>
+		<item value="815" key="DIALOG_X_ORIGIN"/>
+		<item value="438" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
