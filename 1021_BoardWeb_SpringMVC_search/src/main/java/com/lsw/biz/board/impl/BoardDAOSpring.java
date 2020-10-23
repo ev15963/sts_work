@@ -4,11 +4,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 
 import com.lsw.biz.board.BoardVO;
 
+@Repository
 public class BoardDAOSpring{
 	
 	//SQL명령어들
@@ -20,12 +23,15 @@ public class BoardDAOSpring{
 	// Transaction 테스트를 위한 SQL
 	private final String BOARD_INSERT_TRANSACTION = 
 			"insert into board_spring (seq, title, writer, content) value (?, ?, ?, ?)";
-	
+
+	private final String BOARD_LIST_T = "select * from board where title like '%'||?||'%' order by seq desc";
+	private final String BOARD_LIST_C = "select * from board where content like '%'||?||'%' order by seq desc";
+
 	
 	public BoardDAOSpring() {
 		
 	}
-//	@Autowired
+	@Autowired
 	private JdbcTemplate jdbcTemplate;
 //	public void setSuperDataSource(DataSource datasource) {
 //		super.setDataSource(datasource);
@@ -64,7 +70,13 @@ public class BoardDAOSpring{
 	//글목록 조회
 	public List<BoardVO> getBoardList(BoardVO vo) {
 		System.out.println("===> Spring JDBC로 getBoardList() 기능 처리");
-		return jdbcTemplate.query(BOARD_LIST, new BoardRowMapper());
+		Object[] args = {vo.getSearchKeyword()};
+		if(vo.getSearchCondition().equals("TITLE")) {
+		return jdbcTemplate.query(BOARD_LIST_T, args, new BoardRowMapper());
+		} else if (vo.getSearchCondition().equals("CONTENT")) {
+			return jdbcTemplate.query(BOARD_LIST_C, args, new BoardRowMapper());
+		}
+		return null;
 	}
 	
 	class BoardRowMapper implements RowMapper<BoardVO> {

@@ -3,6 +3,7 @@ package com.lsw.view.board;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,12 +11,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.lsw.biz.board.BoardService;
 import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
 
 @Controller
 @SessionAttributes("board")
 public class BoardController {
+	
+	@Autowired
+	private BoardService boardService;
+	
 //	com.lsw.view.board
 	//검색 조건 목록 설정
 	@ModelAttribute("conditionMap")
@@ -77,18 +83,17 @@ public class BoardController {
 	}
 	
 //	GetBoardListController.java 글목록 검색
-	@RequestMapping(value="/getBoardList.do")
-	public String getBoardList(//BoardVO vo, BoardDAO boardDAO, Model model) {
-			@RequestParam(value="searchCondition", 
-		defaultValue="TITLE", required=false) String condition, 
-		@RequestParam(value="searchKeyword", defaultValue="", required=false)
-		String keyword, BoardVO vo, BoardDAO boardDAO, Model model) {
-
-		System.out.println("검색조건 : "+condition);
-		System.out.println("검색단어 : "+keyword);
+	@RequestMapping("/getBoardList.do")
+	public String getBoardList(BoardVO vo, Model model) {
+		if(vo.getSearchCondition()==null) vo.setSearchCondition("TITLE");
+		if(vo.getSearchKeyword()==null) vo.setSearchCondition("");
+		
+		
+//		System.out.println("검색조건 : "+condition);
+//		System.out.println("검색단어 : "+keyword);
 //		else if (path.equals("/getBoardList.do")) {
 			//model  정보 저장
-		model.addAttribute("boardList", boardDAO.getBoardList(vo));
+		model.addAttribute("boardList", boardService.getBoardList(vo));
 		return "getBoardList.jsp";
 		
 	}
