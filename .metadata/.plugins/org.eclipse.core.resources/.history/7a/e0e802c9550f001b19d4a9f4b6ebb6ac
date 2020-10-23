@@ -1,7 +1,0 @@
-package com.lsw.view.board;
-
-import com.lsw.view.controller.Controller;
-
-public class InsertBoardController implements Controller{
-
-}

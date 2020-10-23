@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.lsw.biz.board.BoardListVO;
 import com.lsw.biz.board.BoardService;
 import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
@@ -26,11 +27,13 @@ public class BoardController {
 	
 	@RequestMapping("/dataTransform.do")
 	@ResponseBody
-	public List<BoardVO> dataTransform(BoardVO vo) {
+	public BoardListVO dataTransform(BoardVO vo) {
 		vo.setSearchCondition("TITLE");
 		vo.setSearchKeyword("");
 		List<BoardVO> boardList = boardService.getBoardList(vo);
-		return boardList;
+		BoardListVO boardListVO = new BoardListVO();
+		boardListVO.setBoardList(boardList);
+		return boardListVO;
 	}
 //	com.lsw.view.board
 	//검색 조건 목록 설정
