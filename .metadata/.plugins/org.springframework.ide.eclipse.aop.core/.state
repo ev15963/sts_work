@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="BoardWeb_SpringMVC_integration"/>
-<aop-project name="1021_BoardWeb_SpringMVC_integration"/>
+<aop-project name="1023_BoardWeb_SpringMVC_anno_json"/>
 </aop-reference-model>

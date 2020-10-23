@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;com.lsw.biz.board.BoardVO.uploadFile&apos; in &apos;com.lsw.biz.board.BoardVO&apos;&#x0D;&#x0A;- Original project: &apos;1023_BoardWeb_SpringMVC_anno_json&apos;&#x0D;&#x0A;- Original element: &apos;com.lsw.biz.board.BoardVO.uploadFile&apos;&#x0D;&#x0A;- Getter method name: &apos;getUploadFile&apos;&#x0D;&#x0A;- Setter method name: &apos;setUploadFile&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;uploadFile&apos;" flags="589830" getter="getUploadFile" id="org.eclipse.jdt.ui.self.encapsulate" input="/src\/main\/java&lt;com.lsw.biz.board{BoardVO.java[BoardVO^uploadFile" insertion="17" setter="setUploadFile" stamp="1603413858507" version="1.0" visibility="1"/>
+</session>

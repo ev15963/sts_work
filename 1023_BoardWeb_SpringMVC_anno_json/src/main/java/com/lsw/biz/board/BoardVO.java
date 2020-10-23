@@ -2,6 +2,8 @@ package com.lsw.biz.board;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class BoardVO {
 
 	private int seq;
@@ -12,9 +14,9 @@ public class BoardVO {
 	private int cnt;
 	private String searchCondition;
 	private String searchKeyword;
+	private String uploadFile;
 
-
-
+	@JsonIgnore
 	public String getSearchCondition() {
 		return searchCondition;
 	}
@@ -26,7 +28,7 @@ public class BoardVO {
 	}
 
 
-
+	@JsonIgnore
 	public String getSearchKeyword() {
 		return searchKeyword;
 	}
@@ -37,6 +39,18 @@ public class BoardVO {
 		this.searchKeyword = searchKeyword;
 	}
 
+	
+
+	@JsonIgnore
+	public String getUploadFile() {
+		return uploadFile;
+	}
+
+
+
+	public void setUploadFile(String uploadFile) {
+		this.uploadFile = uploadFile;
+	}
 
 	
 	public BoardVO() {
@@ -100,4 +114,6 @@ public class BoardVO {
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
 	}
+
+
 }
