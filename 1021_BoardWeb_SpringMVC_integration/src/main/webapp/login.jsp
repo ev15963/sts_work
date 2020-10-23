@@ -8,7 +8,7 @@
 </head>
 
 <body align="center">
-	<h1>로그인ddd</h1>
+	<h1>로그인</h1>
 	<hr>
 	<div align="center">
 		<form action="login.do" method="post">
