@@ -1,0 +1,30 @@
+package com.lsw.biz.util;
+
+import java.io.IOException;
+import java.io.Reader;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+public class SqlSessionFactoryBean {
+	private static SqlSessionFactory sessionFactory = null;
+	static {
+		if(sessionFactory == null) {
+			//src/ 설정파일 읽기
+			Reader reader;
+			try {
+				reader = Resources.getResourceAsReader("sql-map-cofig.xml");
+				sessionFactory = new SqlSessionFactoryBuilder().build(reader);
+			} catch (IOException e) {
+				System.out.println("SqlSessionFactoryBean err"+e.getMessage());
+			}
+		}
+	}
+	
+	//BoardDAO() 클래스의 생성자에 의해 호출
+	public static SqlSession getSqlSessionInstance() {
+		return sessionFactory.openSession();
+	}
+}

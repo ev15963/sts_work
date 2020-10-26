@@ -1,0 +1,13 @@
+package com.lsw.biz.util;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public class SqlSessionFactoryBean {
+	private static SqlSessionFactory sessionFactory = null;
+	static {
+		if(sessionFactory == null) {
+			Reader reader = Resources.getResourceAsReader("sql-map-cofig.xml");
+		}
+	}
+}
