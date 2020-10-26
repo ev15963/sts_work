@@ -6,12 +6,13 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="ContextLoaderListener" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="검색"/>
 			<item value="ContextLoaderListener"/>
 			<item value="allPointcut"/>
 			<item value="contextConfigLocation"/>
@@ -19,7 +20,6 @@
 			<item value="boardDAO."/>
 			<item value="boardDAO"/>
 			<item value="logout"/>
-			<item value="getBoardList()"/>
 		</list>
 		<list key="replacehistory">
 			<item value="boardService."/>

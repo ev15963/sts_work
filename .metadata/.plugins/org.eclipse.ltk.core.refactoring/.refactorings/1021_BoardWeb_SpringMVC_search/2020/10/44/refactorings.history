@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BoardVO.java&apos; to &apos;1026_MyBatisProject/src/main/java/com.lsw.biz.board&apos;&#x0D;&#x0A;- Original project: &apos;1021_BoardWeb_SpringMVC_search&apos;&#x0D;&#x0A;- Destination element: &apos;1026_MyBatisProject/src/main/java/com.lsw.biz.board&apos;&#x0D;&#x0A;- Original element: &apos;com.lsw.biz.board.BoardVO.java&apos;" description="Copy compilation unit" destination="=1026_MyBatisProject/src\/main\/java&lt;com.lsw.biz.board" element1="/src\/main\/java&lt;com.lsw.biz.board{BoardVO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1603672963440" units="1" version="1.0"/>
+</session>
