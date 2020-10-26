@@ -1,6 +1,5 @@
 package com.lsw.biz.util;
 
-import java.io.IOException;
 import java.io.Reader;
 
 import org.apache.ibatis.io.Resources;
@@ -13,14 +12,14 @@ public class SqlSessionFactoryBean {
 	static {
 		if(sessionFactory == null) {
 			//src/ 설정파일 읽기
-			Reader reader;
 			try {
 				if (sessionFactory == null) {
-				reader = Resources.getResourceAsReader("sql-map-config.xml");
+				Reader reader = Resources.getResourceAsReader("sql-map-config.xml");
 				sessionFactory = new SqlSessionFactoryBuilder().build(reader);
 				}
-			} catch (IOException e) {
+			} catch (Exception e) {
 				System.out.println("SqlSessionFactoryBean err"+e.getMessage());
+				System.out.println("sessionFactory : "+sessionFactory);
 			}
 		}
 	}
