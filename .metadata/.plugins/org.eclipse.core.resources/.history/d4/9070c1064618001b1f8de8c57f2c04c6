@@ -39,15 +39,26 @@
 	</select>
 	
 	<select id="getBoardList"  parameterType="board" resultMap="boardResult">
-		SELECT *
-		FROM BOARD
-		WHERE 1 = 1
-		<if test="searchCondition == 'TITLE">
-			and TITLE LIKE '%'||#{searchKeyword}||'%'
-		</if>
-		<if test="searchCondition == 'CONTENT">
-			and CONTENT LIKE '%'||#{searchKeyword}||'%'
-		</if>
-		ORDER BY SEQ DESC
+		<![CDATA[
+		select * from board_spring
+		where title like '%'||#{searchKeyword}||'%'
+		order by SEQ desc
+		]]>
+	</select>
+	
+	<select id="getBoardList_T"  parameterType="board" resultMap="boardResult">
+		<![CDATA[
+		select * from board_spring
+		where title like '%'||#{searchKeyword}||'%'
+		order by SEQ desc
+		]]>
+	</select>
+	
+	<select id="getBoardList_C"  parameterType="board" resultMap="boardResult">
+		<![CDATA[
+		select * from board_spring
+		where content like '%'||#{searchKeyword}||'%'
+		order by SEQ desc
+		]]>
 	</select>
 </mapper>
