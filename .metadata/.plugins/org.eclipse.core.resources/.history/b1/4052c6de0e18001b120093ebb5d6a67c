@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="BoardDAO">
+
+	<resultMap id="boardResult" type="board">
+		<id property="seq" column="SEQ" />
+		<result property="title" column="TITLE" />
+		<result property="writer" column="WRITER" />
+		<result property="content" column="CONTENT" />
+		<result property="regDate" column="REGDATE" />
+		<result property="cnt" column="CNT" />
+	</resultMap>
+
+	<insert id="insertBoard" parameterType="boardList">
+		<![CDATA[
+		insert into board_spring (SEQ, title, writer, content) 
+		values ((select nvl(max(SEQ), 0)+1 from board_spring), #{title}, #{writer}, #{content})
+		]]>
+	</insert>
+
+	<update id="updateBoard" parameterType="board">
+		<![CDATA[
+		update board_spring set title=#{title}, content=#{content} where SEQ=#{SEQ}
+		]]>
+	</update>
+	
+	<delete id="deleteBoard" parameterType="board">
+		<![CDATA[
+		delete board_spring where SEQ=#{SEQ}
+		]]>
+	</delete>
+	
+	<select id="getBoard" parameterType="board">
+		<![CDATA[
+		select * from board_spring where SEQ=#{SEQ}
+		]]>
+	</select>
+	
+	<select id="getBoardList"  parameterType="board" resultMap="boardResult">
+		<![CDATA[
+		select * from board_spring
+		where title like '%'||#{searchKeyword}||'%'
+		order by SEQ desc
+		]]>
+	</select>
+
+</mapper>

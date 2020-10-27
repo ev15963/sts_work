@@ -45,5 +45,20 @@
 		order by SEQ desc
 		]]>
 	</select>
-
+	
+	<select id="getBoardList_T"  parameterType="board" resultMap="boardResult">
+		<![CDATA[
+		select * from board_spring
+		where title like '%'||#{searchKeyword}||'%'
+		order by SEQ desc
+		]]>
+	</select>
+	
+	<select id="getBoardList_C"  parameterType="board" resultMap="boardResult">
+		<![CDATA[
+		select * from board_spring
+		where content like '%'||#{searchKeyword}||'%'
+		order by SEQ desc
+		]]>
+	</select>
 </mapper>
