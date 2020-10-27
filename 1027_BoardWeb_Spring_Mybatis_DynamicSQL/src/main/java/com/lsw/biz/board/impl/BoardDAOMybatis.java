@@ -17,23 +17,23 @@ public class BoardDAOMybatis extends SqlSessionDaoSupport{
 	}
 
 	public void insertBoard(BoardVO vo) {
-		System.out.println("===> Mybatisë¡œ insertBoard() ê¸°ëŠ¥ ì²˜ë¦¬");
+		System.out.println("===> Mybatis·Î insertBoard() ±â´É Ã³¸®");
 		getSqlSession().insert("BoardDAO.insertBoard", vo);
 	}
 	public void updateBoard(BoardVO vo) {
-		System.out.println("===> Mybatisë¡œ updateBoard() ê¸°ëŠ¥ ì²˜ë¦¬");
+		System.out.println("===> Mybatis·Î updateBoard() ±â´É Ã³¸®");
 		getSqlSession().update("BoardDAO.updateBoard", vo);
 	}
 	public void deleteBoard(BoardVO vo) {
-		System.out.println("===> Mybatisë¡œ deleteBoard() ê¸°ëŠ¥ ì²˜ë¦¬");
+		System.out.println("===> Mybatis·Î deleteBoard() ±â´É Ã³¸®");
 		getSqlSession().delete("BoardDAO.deleteBoard", vo);
 	}
 	public BoardVO getBoard(BoardVO vo) {
-		System.out.println("===> Mybatisë¡œ getBoard() ê¸°ëŠ¥ ì²˜ë¦¬");
+		System.out.println("===> Mybatis·Î getBoard() ±â´É Ã³¸®");
 		return (BoardVO) getSqlSession().selectOne("BoardDAO.getBoard", vo);
 	}
 	public List<BoardVO> getBoardList(BoardVO vo) {
-		System.out.println("===> Mybatisë¡œ getBoardList() ê¸°ëŠ¥ ì²˜ë¦¬");
+		System.out.println("===> Mybatis·Î getBoardList() ±â´É Ã³¸®");
 		return getSqlSession().selectList("BoardDAO.getBoardList", vo);
 	}
 }

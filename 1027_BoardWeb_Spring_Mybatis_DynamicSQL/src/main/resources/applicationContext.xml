@@ -14,30 +14,26 @@
 
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	
-<!-- 	<aop:aspect ref="afterThrowing"> -->
-<!-- 		<aop:after-throwing pointcut-ref="allPointcut" -->
-<!-- 			method="exceptLog" throwing="exceptObj" /> -->
-<!-- 	</aop:aspect> -->
-	
-	
-
-<!-- 	<aop:config> -->
-<!-- 		<aop:pointcut id="allPointcut" -->
-<!-- 			expression="execution(* com.lsw.biz..*Impl.*(..))" /> -->
-<!-- 		<aop:pointcut id="getPointcut" -->
-<!-- 			expression="execution(* com.lsw.biz..*Impl.get*(..))" /> -->
-<!-- 		<aop:aspect ref="log"> -->
-<!-- 			<aop:before pointcut-ref="allPointcut" method="printLog" /> -->
-<!-- 		</aop:aspect> -->
-	
-<!-- 	</aop:config> -->
 	
 <!-- 	DataSource 설정 -->
+	<context:property-placeholder location="classpath:config/database.properties" />
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver}" />
-		<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:XE" />
-		<property name="username" value="lsw" />
-		<property name="password" value="1234" />
+		<property name="driverClassName" value="${jdbc.driver}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+	
+	<!-- Spring JdbcTemplate 설정 -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- Spring _ mybatis  -->
+	
+	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:sql-map-config.xml" />
 	</bean>
 	
 <!-- 	transaction regisration -->
@@ -53,20 +49,12 @@
 		</tx:attributes>
 	</tx:advice>
 
-	<aop:config>
-		<aop:pointcut expression="execution(* com.lsw.biz..*(..))" id="txPointcut" />
-		
-		<aop:advisor pointcut-ref="txPointcut" advice-ref="txAdvice" />
-	</aop:config>
-	
-<!-- 	<bean id="log" class="com.lsw.biz.board.common.LogAdvice"></bean> -->
-	
-<!-- 	<aop:comfig> -->
-<!-- 		<aop:pointcut id="allPointcut" expression -->
-	
-<!-- 	</aop:comfig> -->
+	<!-- Transaction Advisor Configuration -->
+<!-- 	<aop:config> -->
+<!-- 		<aop:pointcut expression="execution(* com.lsw.biz..*Impl.*(..))" id="txPointcut" /> -->
+<!-- 		<aop:advisor pointcut-ref="txPointcut" advice-ref="txAdvice" /> -->
+<!-- 	</aop:config> -->
 
-	<context:property-placeholder location="classpath:config/database.properties" />
 
 	
 	
