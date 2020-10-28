@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.lsw.biz.board.BoardVO;
@@ -21,8 +20,7 @@ public class BoardDAO {
 	private ResultSet rs = null;
 
 	// SQL 명령어들
-	private final String BOARD_INSERT = "insert into board_spring (seq, title, writer, content) values"
-			+ " ((select nvl(max(seq), 0)+1 from board_spring) , ?, ?, ?)";
+	private final String BOARD_INSERT = "insert into board_spring (seq, title, writer, content) values ((select nvl(max(seq), 0)+1 from board_spring) , ?, ?, ?)";
 	private final String BOARD_UPDATE = "update board_spring set title=?, content=? where seq=?";
 	private final String BOARD_DELETE = "delete board_spring where seq=?";
 	private final String BOARD_GET = "select * from board_spring where seq=?";
@@ -39,32 +37,20 @@ public class BoardDAO {
 	// 글등록
 	public void insertBoard(BoardVO vo) {
 		System.out.println("==> JDBC로 insertBoard() 기능 처리 : ");
-		List<BoardVO> boardList = new ArrayList<BoardVO>();
+		//List<BoardVO> boardList = new ArrayList<BoardVO>();
 
 		try {
-			conn = JDBCUtil.getConnection();
-			if (vo.getSearchCondition().equals("TITLE")) {
-				stmt = conn.prepareStatement(BOARD_INSERT);
-			} else if (vo.getSearchCondition().equals("CONTENT")) {
-				stmt = conn.prepareStatement(BOARD_LIST_C);
-			}
-			stmt.setString(1, vo.getSearchKeyword());
-
-			rs = stmt.executeQuery();
-			while (rs.next()) {
-				BoardVO board = new BoardVO();
-				board.setSeq(rs.getInt("SEQ"));
-				board.setTitle(rs.getString("TITLE"));
-				board.setWriter(rs.getString("WRITER"));
-				board.setContent(rs.getString("CONTENT"));
-				board.setRegDate(rs.getDate("REGDATE"));
-				board.setCnt(rs.getInt("CNT"));
-				boardList.add(board);
-			}
+			this.conn = JDBCUtil.getConnection();
+			// 
+			this.stmt = this.conn.prepareStatement(BOARD_INSERT);
+			this.stmt.setString(1, vo.getTitle());
+			this.stmt.setString(2, vo.getWriter());
+			this.stmt.setString(3, vo.getContent());
+			this.stmt.executeUpdate();
 		} catch (SQLException e) {
-			System.out.println("insertBoard err" + e.getMessage());
+			e.printStackTrace();
 		} finally {
-			JDBCUtil.close(rs, stmt, conn);
+			JDBCUtil.close(stmt, conn);
 		}
 	}
 

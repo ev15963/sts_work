@@ -22,82 +22,70 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 	
-//	com.lsw.view.board
-	//°Ë»ö Á¶°Ç ¸ñ·Ï ¼³Á¤
-	@ModelAttribute("conditionMap")
-	public Map<String, String> searchConditionMap() {
-		Map<String, String> conditionMap = new HashMap<String, String>();
-		conditionMap.put("Á¦¸ñ", "TITLE");
-		conditionMap.put("³»¿ë", "CONTENT");
-		
-		return conditionMap;
-	}
-	
-	
-//	InsertBoardController.java ±Ûµî·Ï
+//	InsertBoardController.java ê¸€ë“±ë¡
 	@RequestMapping(value="/insertBoard.do") //value=
 	public String insertBoard(BoardVO vo, BoardDAO boardDAO) { //HttpServletRequest request
 //		else if (path.equals("/insertBoard.do")) { // loginBoard.do -> insertBoard.do
-			System.out.println("±Ûµî·ÏÃ³¸® ÅëÇÕ");
+			System.out.println("ê¸€ë“±ë¡ì²˜ë¦¬ í†µí•©");
 			
-			boardDAO.insertBoard(vo);
-			return "redirect:getBoardList.do";
+			boardService.insertBoard(vo);
+			return "getBoardList.do";
 	}
-//	UpdateBoardController.java ±Û¼öÁ¤
+//	UpdateBoardController.java ê¸€ìˆ˜ì •
 	@RequestMapping("/updateBoard.do")
 	public String updateBoard(@ModelAttribute("board") BoardVO vo, BoardDAO boardDAO) { //@ModelAttribute("board") 
-		System.out.println("±Û¼öÁ¤Ã³¸® ÅëÇÕ");
-//		System.out.println("ÀÛ¼ºÀÚ ÀÌ¸§ : "+vo.getVOwriter());
-		System.out.println("¹øÈ£ : "+vo.getSeq());
-		System.out.println("Á¦¸ñ : "+vo.getTitle());
-		System.out.println("ÀÛ¼ºÀÚ : "+vo.getWriter());
-		System.out.println("³»¿ë : "+vo.getContent());
-		System.out.println("µî·ÏÀÏ : "+vo.getRegDate());
-		System.out.println("Á¶È¸¼ö : "+vo.getCnt());
+		System.out.println("ê¸€ìˆ˜ì •ì²˜ë¦¬ í†µí•©");
+//		System.out.println("ì‘ì„±ì ì´ë¦„ : "+vo.getVOwriter());
+		System.out.println("ë²ˆí˜¸ : "+vo.getSeq());
+		System.out.println("ì œëª© : "+vo.getTitle());
+		System.out.println("ì‘ì„±ì : "+vo.getWriter());
+		System.out.println("ë‚´ìš© : "+vo.getContent());
+		System.out.println("ë“±ë¡ì¼ : "+vo.getRegDate());
+		System.out.println("ì¡°íšŒìˆ˜ : "+vo.getCnt());
 		
-		boardDAO.updateBoard(vo);
+		boardService.updateBoard(vo);
 		
 		return "getBoardList.do";
 	}
 	
-//	DeleteBoardController.java ±Û»èÁ¦
+//	DeleteBoardController.java ê¸€ì‚­ì œ
 	@RequestMapping(value="/deleteBoard.do")
 	public String deleteBoard (BoardVO vo, BoardDAO boardDAO) {
-			System.out.println("±Û»èÁ¦Ã³¸® ÅëÇÕ");
+			System.out.println("ê¸€ì‚­ì œì²˜ë¦¬ í†µí•©");
 			
-			boardDAO.deleteBoard(vo);
+			boardService.deleteBoard(vo);
 			return "getBoardList.do";
 	}
 	
-//	GetBoardController.java ±Û»ó¼¼Á¶È¸
+//	GetBoardController.java ê¸€ìƒì„¸ì¡°íšŒ
 	@RequestMapping(value="/getBoard.do")
-	public String getBoard(BoardVO vo, BoardDAO boardDAO, Model model) {
-		System.out.println("±Û»ó¼¼Á¶È¸Ã³¸® ÅëÇÕ");
+	public String getBoard(BoardVO vo, Model model) {
+		System.out.println("ê¸€ìƒì„¸ì¡°íšŒì²˜ë¦¬ í†µí•©");
 		
-		//Model Á¤º¸ ÀúÀå
-		model.addAttribute("board", boardDAO.getBoard(vo)); //List
+		model.addAttribute("board", boardService.getBoard(vo));
 		return "getBoard.jsp";
-//		mav.addObject("board", boardDAO.getBoard(vo));	//Mode1 Á¤º¸ ÀúÀå
-//		mav.setViewName("getBoard.jsp");	//View Á¤º¸ ÀúÀå
-//		return mav;
 	}
 	
-//	GetBoardListController.java ±Û¸ñ·Ï °Ë»ö
-	@RequestMapping("/getBoardList.do")
+	@RequestMapping(value="/getBoardList.do")
 	public String getBoardList(BoardVO vo, Model model) {
-		if(vo.getSearchCondition()==null) vo.setSearchCondition("TITLE");
-		if(vo.getSearchKeyword()==null) vo.setSearchCondition("");
-		
-		
-//		System.out.println("°Ë»öÁ¶°Ç : "+condition);
-//		System.out.println("°Ë»ö´Ü¾î : "+keyword);
-//		else if (path.equals("/getBoardList.do")) {
-			//model  Á¤º¸ ÀúÀå
+		System.out.println("ê¸€ getBoardList");
+
 		model.addAttribute("boardList", boardService.getBoardList(vo));
 		return "getBoardList.jsp";
-		
 	}
 	
 	
+//	com.lsw.view.board
+	//ê²€ìƒ‰ ì¡°ê±´ ëª©ë¡ ì„¤ì •
+	@ModelAttribute("conditionMap")
+	public Map<String, String> searchConditionMap() {
+		Map<String, String> conditionMap = new HashMap<String, String>();
+		conditionMap.put("ì œëª©", "TITLE");
+		conditionMap.put("ë‚´ìš©", "CONTENT");
+		
+		return conditionMap;
+	}
+	
+
 	
 }
