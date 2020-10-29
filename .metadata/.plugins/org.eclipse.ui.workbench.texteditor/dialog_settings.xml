@@ -6,12 +6,13 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="mybatis" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="contitionMap"/>
 			<item value="getSqlSession()"/>
 			<item value="검색"/>
 			<item value="ContextLoaderListener"/>
@@ -19,7 +20,6 @@
 			<item value="contextConfigLocation"/>
 			<item value="file"/>
 			<item value="boardDAO."/>
-			<item value="boardDAO"/>
 		</list>
 		<list key="replacehistory">
 			<item value="mybatis"/>

@@ -51,7 +51,6 @@
 <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
 <fullyQualifiedTypeName name="com.lsw.biz.util.SqlSessionFactoryBean"/>
 <fullyQualifiedTypeName name="com.lsw.biz.board.BoardVO"/>
-<fullyQualifiedTypeName name="com.lsw.biz.board.impl.BoardDAO"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.mybatis.spring.support.SqlSessionDaoSupport"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="ch.qos.logback.core.net.SyslogOutputStream"/>
 <fullyQualifiedTypeName name="com.lsw.biz.board.impl.BoardDAOMybatis"/>
 <fullyQualifiedTypeName name="org.mybatis.spring.SqlSessionTemplate"/>
+<fullyQualifiedTypeName name="com.lsw.biz.board.impl.BoardDAO"/>
 </qualifiedTypeNameHistroy>
