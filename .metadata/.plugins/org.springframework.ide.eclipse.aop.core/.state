@@ -47,5 +47,6 @@
 </aspect-definition>
 </aop-project>
 <aop-project name="BoardWeb_SpringMVC_search"/>
+<aop-project name="Nov_project"/>
 <aop-project name="1021_BoardWeb_SpringMVC_integration"/>
 </aop-reference-model>
