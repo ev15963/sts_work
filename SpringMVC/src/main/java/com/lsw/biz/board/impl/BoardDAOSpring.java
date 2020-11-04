@@ -19,8 +19,7 @@ public class BoardDAOSpring{
 	private final String BOARD_LIST="select * from board order by seq desc";
 	// Transaction 테스트를 위한 SQL
 	private final String BOARD_INSERT_TRANSACTION = 
-			"insert into board_spring (seq, title, writer, content) value (?, ?, ?, ?)";
-	
+			"insert into board_spring (seq, title, writer, content) value (?, ?, ?, ?)";	
 	
 	public BoardDAOSpring() {
 		
@@ -66,6 +65,8 @@ public class BoardDAOSpring{
 		System.out.println("===> Spring JDBC로 getBoardList() 기능 처리");
 		return jdbcTemplate.query(BOARD_LIST, new BoardRowMapper());
 	}
+	
+//	public 
 	
 	class BoardRowMapper implements RowMapper<BoardVO> {
 	

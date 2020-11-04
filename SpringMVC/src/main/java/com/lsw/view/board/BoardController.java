@@ -1,5 +1,7 @@
 package com.lsw.view.board;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
@@ -30,9 +33,15 @@ public class BoardController {
 	
 //	InsertBoardController.java 글등록
 	@RequestMapping(value="/insertBoard.do") //value=
-	public String insertBoard(BoardVO vo, BoardDAO boardDAO) { //HttpServletRequest request
+	public String insertBoard(BoardVO vo, BoardDAO boardDAO) throws IOException{ //HttpServletRequest request
 //		else if (path.equals("/insertBoard.do")) { // loginBoard.do -> insertBoard.do
 			System.out.println("글등록처리 통합");
+			
+//			MultipartFile uploadFile = vo.getUploadFile();
+//			if(!uploadFile.isEmpty()) {
+//				String fileName=uploadFile.getOriginalFilename();
+//				uploadFile.transferTo(new File("C:/"+fileName));
+//			}
 			
 			boardDAO.insertBoard(vo);
 			return "redirect:getBoardList.do";
@@ -89,7 +98,7 @@ public class BoardController {
 //		else if (path.equals("/getBoardList.do")) {
 			//model  정보 저장
 		model.addAttribute("boardList", boardDAO.getBoardList(vo));
-		return "getBoardList.jsp";
+		return "getBoardList.jsp"; //jsp -> do
 		
 	}
 	

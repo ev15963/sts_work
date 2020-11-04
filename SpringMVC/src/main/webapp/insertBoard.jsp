@@ -26,7 +26,7 @@
 		
 		
 		</div>
-		<h3>결제 서류 등록</h3>
+		<h3>결제 서류 등록22</h3>
 			<!-- 검색 시작 -->
 	<form action="insertBoard.do" method="post">
 		<table boarder="1" cellpadding="0" cellspacing="0">
@@ -41,8 +41,11 @@
 			</tr>
 			<tr>
 				<td bgcolor="skyblue" width="70">내용</td>
-				<td align="left"><textarea type="content" name="content"
-						cols="40" rows="10" /> </textarea></td>
+				<td align="left"><textarea type="content" name="content" cols="40" rows="10"> </textarea></td>
+			</tr>
+			<tr>
+				<td bgcolor="skyblue" width="70">파일 첨부</td>
+				<td align="left"><input type="file" name="uploadFile" />
 			</tr>
 			<tr>
 				<td colspan="2" align="center"><input type="submit"

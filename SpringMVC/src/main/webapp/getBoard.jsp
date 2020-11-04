@@ -26,9 +26,9 @@
 		<a href="deleteBoard.do?seq=${board.seq }">글삭제</a><br>
 		<a href="getBoardList.do">글목록</a>
 			&nbsp;&nbsp;&nbsp; 
-		
-		
 		</div>
+		
+		
 		<h3>결제 내역 상세</h3>
 			<!-- 검색 시작 -->
 	<form action="updateBoard.do" method="get">

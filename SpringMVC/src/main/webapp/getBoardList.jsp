@@ -17,13 +17,14 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>결제 서류 리스트</title>
+<title>getBoardList</title>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet"
 	href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <style>
+	tbody{text-align:center}
       table{text-align:center}
 </style>
 
@@ -44,18 +45,18 @@
 			</div>
 			<h3>결제 서류 리스트</h3>
 			<!-- 검색 시작 -->
-			<p>
 			<form action="getBoardList.do" method="post">
 				<table border="1" cellpadding="0" cellspacing="0"
 					width="700">
 					<tr>
 						<td align="right">
-							<!-- 					BoardController의 @ModerAttribute : 검색 조건 목록 설정 --> <select
-							name="searchCondition">
+							<select name="searchCondition">
 								<c:forEach var="option" items="${conditionMap }">
 									<option value="${option.value }">${option.key }
 								</c:forEach>
-						</select> <input type="submit" value="검색" />
+						</select>
+						<input name="searchKeyword" type="text" />
+						<input type="submit" value="검색" />
 						</td>
 					</tr>
 				</table>
@@ -82,9 +83,7 @@
 						<td>${board.cnt }</td>
 					</tr>
 				</c:forEach>
-
 			</table>
-			</p>
 		</div>
 	</tbody>
 </body>
