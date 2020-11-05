@@ -28,8 +28,8 @@ public class BoardDAO {
 	private final String BOARD_GET = "select * from board_spring where seq=?";
 	private final String BOARD_LIST = "select * from board_spring order by seq desc";
 
-	private final String BOARD_LIST_SEARCHCONDITION = "select * from board_spring where title like '%'||?||'%' order by seq desc"; // searchCondition
-	private final String BOARD_LIST_SEARCHKEYWORD = "select * from board_spring where content like '%'||?||'%' order by seq desc"; // searchKeyword;
+	private final String BOARD_LIST_T = "select * from board_spring where title like '%'||?||'%' order by seq desc"; // searchCondition
+	private final String BOARD_LIST_C = "select * from board_spring where content like '%'||?||'%' order by seq desc"; // searchKeyword;
 
 	public BoardDAO() {
 
@@ -42,15 +42,21 @@ public class BoardDAO {
 		List<BoardVO> boardList = new ArrayList<BoardVO>();
 		try {
 			conn = JDBCUtil.getConnection();
-			stmt = conn.prepareStatement(BOARD_LIST_SEARCHCONDITION);
-			rs = stmt.executeQuery();
-			while (rs.next()) {
-				BoardVO board = new BoardVO();
-				
-				board.setSearchCondition(rs.getString("SEARCHCONDITION"));
-
-				boardList.add(board);
+			if(vo.getSearchCondition().equals("TITLE")) {
+				stmt = conn.prepareStatement(BOARD_LIST_T);				
+			} else if(vo.getSearchKeyword().equals("CONTENT")) {
+				stmt = conn.prepareStatement(BOARD_LIST_C);
 			}
+			stmt.setString(1, vo.getSearchKeyword());
+			rs = stmt.executeQuery();
+			
+//			while (rs.next()) {
+//				BoardVO board = new BoardVO();
+//				
+//				board.setSearchCondition(rs.getString("SEARCHCONDITION"));
+//
+//				boardList.add(board);
+//			}
 		} catch (Exception e) {
 			System.out.println("getBoardList err" + e.getMessage());
 		} finally {
@@ -61,29 +67,29 @@ public class BoardDAO {
 	}
 	
 	// 글목록조회 내용++++++++++++++++++++++++++++
-	public List<BoardVO> getBoardList_2(BoardVO vo) {
-		System.out.println("==> JDBC로 getBoardList2() 기능 처리");
-
-		List<BoardVO> boardList = new ArrayList<BoardVO>();
-		try {
-			conn = JDBCUtil.getConnection();
-			stmt = conn.prepareStatement(BOARD_LIST_SEARCHKEYWORD);
-			rs = stmt.executeQuery();
-			while (rs.next()) {
-				BoardVO board = new BoardVO();
-				
-				board.setSearchCondition(rs.getString("SEARCHKEYWORD"));
-
-				boardList.add(board);
-			}
-		} catch (Exception e) {
-			System.out.println("getBoardList err" + e.getMessage());
-		} finally {
-			JDBCUtil.close(rs, stmt, conn);
-		}
-
-		return boardList;
-	}
+//	public List<BoardVO> getBoardList_2(BoardVO vo) {
+//		System.out.println("==> JDBC로 getBoardList2() 기능 처리");
+//
+//		List<BoardVO> boardList = new ArrayList<BoardVO>();
+//		try {
+//			conn = JDBCUtil.getConnection();
+//			stmt = conn.prepareStatement(BOARD_LIST_SEARCHKEYWORD);
+//			rs = stmt.executeQuery();
+//			while (rs.next()) {
+//				BoardVO board = new BoardVO();
+//				
+//				board.setSearchCondition(rs.getString("SEARCHKEYWORD"));
+//
+//				boardList.add(board);
+//			}
+//		} catch (Exception e) {
+//			System.out.println("getBoardList err" + e.getMessage());
+//		} finally {
+//			JDBCUtil.close(rs, stmt, conn);
+//		}
+//
+//		return boardList;
+//	}
 
 	// CRUD 기능의 메소드 구현
 	// 글등록
