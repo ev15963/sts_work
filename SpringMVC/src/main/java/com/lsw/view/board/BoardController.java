@@ -1,6 +1,5 @@
 package com.lsw.view.board;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.lsw.biz.board.BoardVO;
 import com.lsw.biz.board.impl.BoardDAO;
@@ -36,13 +34,7 @@ public class BoardController {
 	public String insertBoard(BoardVO vo, BoardDAO boardDAO) throws IOException{ //HttpServletRequest request
 //		else if (path.equals("/insertBoard.do")) { // loginBoard.do -> insertBoard.do
 			System.out.println("글등록처리 통합");
-			
-//			MultipartFile uploadFile = vo.getUploadFile();
-//			if(!uploadFile.isEmpty()) {
-//				String fileName=uploadFile.getOriginalFilename();
-//				uploadFile.transferTo(new File("C:/"+fileName));
-//			}
-			
+
 			boardDAO.insertBoard(vo);
 			return "redirect:getBoardList.do";
 	}
@@ -80,9 +72,6 @@ public class BoardController {
 		//Model 정보 저장
 		model.addAttribute("board", boardDAO.getBoard(vo)); //List
 		return "getBoard.jsp";
-//		mav.addObject("board", boardDAO.getBoard(vo));	//Mode1 정보 저장
-//		mav.setViewName("getBoard.jsp");	//View 정보 저장
-//		return mav;
 	}
 	
 //	GetBoardListController.java 글목록 검색
@@ -95,10 +84,9 @@ public class BoardController {
 
 		System.out.println("검색조건 : "+condition);
 		System.out.println("검색단어 : "+keyword);
-//		else if (path.equals("/getBoardList.do")) {
 			//model  정보 저장
 		model.addAttribute("boardList", boardDAO.getBoardList(vo));
-		return "getBoardList.jsp"; //jsp -> do
+		return "getBoardList.jsp";
 		
 	}
 	

@@ -19,19 +19,19 @@
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 		<header class="mdl-layout__header"></header>
 		<div class="mdl-layout__drawer">
-		
-		<h4>${userName }님의 계정 </h4>
-		<a href="logout.do">Log-out</a> <hr><br>
-		<a href="insertBoard.jsp">글등록</a><br>
-		<a href="deleteBoard.do?seq=${board.seq }">글삭제</a><br>
-		<a href="getBoardList.do">글목록</a>
-			&nbsp;&nbsp;&nbsp; 
+
+			<h4>${userName }님의계정</h4>
+			<a href="logout.do">Log-out</a>
+			<hr>
+			<br> <a href="insertBoard.jsp">글등록</a><br> <a
+				href="deleteBoard.do?seq=${board.seq }">글삭제</a><br> <a
+				href="getBoardList.do">글목록</a> &nbsp;&nbsp;&nbsp;
 		</div>
-		
-		
+
+
 		<h3>결제 내역 상세</h3>
-			<!-- 검색 시작 -->
-	<form action="updateBoard.do" method="get">
+		<!-- 검색 시작 -->
+		<form action="updateBoard.do" method="get">
 			<input name="seq" type="hidden" value="${board.seq }" />
 			<table border="1" cellpadding="0" cellspacing="0">
 				<tr>
@@ -64,11 +64,8 @@
 
 			</table>
 		</form>
-
-
-	<br>
-	<hr>
-		
+		<br>
+		<hr>
 	</div>
 </body>
 </html>

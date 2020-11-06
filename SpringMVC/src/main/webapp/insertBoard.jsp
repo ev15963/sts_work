@@ -26,7 +26,7 @@
 		
 		
 		</div>
-		<h3>결제 서류 등록22</h3>
+		<h3>결제 서류 등록</h3>
 			<!-- 검색 시작 -->
 	<form action="insertBoard.do" method="post">
 		<table boarder="1" cellpadding="0" cellspacing="0">
