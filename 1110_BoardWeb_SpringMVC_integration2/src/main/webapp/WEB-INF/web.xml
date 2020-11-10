@@ -23,7 +23,7 @@
 		<filter-name>characterEncoding</filter-name>
 		<url-pattern>*.do</url-pattern>
 	</filter-mapping>
-s
+
 	<!-- DispatcherServlet Registration -->
 	<servlet>
 		<servlet-name>action</servlet-name>

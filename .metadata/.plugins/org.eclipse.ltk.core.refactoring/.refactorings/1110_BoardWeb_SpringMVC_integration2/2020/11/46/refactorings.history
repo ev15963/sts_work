@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;board-mapping.xml&apos; to &apos;1110_BoardWeb_SpringMVC_integration2/src/main/resources/mappings&apos;&#x0D;&#x0A;- Original project: &apos;1110_BoardWeb_SpringMVC_integration2&apos;&#x0D;&#x0A;- Destination element: &apos;1110_BoardWeb_SpringMVC_integration2/src/main/resources/mappings&apos;&#x0D;&#x0A;- Original element: &apos;board-mapping.xml&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="/src\/main\/resources&lt;mappings" element1="src/main/resources/board-mapping.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1604982310450" units="0" version="1.0"/>
+</session>
