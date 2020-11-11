@@ -3,7 +3,7 @@
   <server auto-publish-setting="2" auto-publish-time="1" com.springsource.tcserver.asf="false" com.springsource.tcserver.name="base-instance" configuration-id="/Servers/Pivotal tc Server Developer Edition v3.2-config" deployDir="wtpwebapps" hostname="localhost" id="Pivotal tc Server Developer Edition v3.2" id-set="true" name="Pivotal tc Server Developer Edition v3.2" runtime-id="Pivotal tc Server Developer Edition (Runtime) v3.2" saveSeparateContextFiles="true" server-type="com.pivotal.server.tc.80" server-type-id="com.pivotal.server.tc.80" start-timeout="120" stop-timeout="15" testEnvironment="false" timestamp="5">
     <list key="modules" value0="1014_BoardWeb_tran::org.eclipse.jst.jee.server:1014_BoardWeb_tran::jst.web::2.5"/>
   </server>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v8.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v8.0 Server at localhost" name="Tomcat v8.0 Server at localhost" runtime-id="Apache Tomcat v8.0" server-type="org.eclipse.jst.server.tomcat.80" server-type-id="org.eclipse.jst.server.tomcat.80" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="20">
-    <list key="modules" value0="1021_BoardWeb_SpringMVC_integration::org.eclipse.jst.jee.server:1021_BoardWeb_SpringMVC_integration::jst.web::2.5"/>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v8.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v8.0 Server at localhost" name="Tomcat v8.0 Server at localhost" runtime-id="Apache Tomcat v8.0" server-type="org.eclipse.jst.server.tomcat.80" server-type-id="org.eclipse.jst.server.tomcat.80" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="23">
+    <list key="modules" value0="1111_springSecuritySample1::org.eclipse.jst.jee.server:1111_springSecuritySample1::jst.web::3.1"/>
   </server>
 </servers>

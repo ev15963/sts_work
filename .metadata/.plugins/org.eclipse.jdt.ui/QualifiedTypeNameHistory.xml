@@ -45,19 +45,19 @@
 <fullyQualifiedTypeName name="com.lsw.biz.board.impl.BoardDAOSpring.BoardRowMapper"/>
 <fullyQualifiedTypeName name="org.apache.ibatis.jdbc.SQL"/>
 <fullyQualifiedTypeName name="java.lang.Readable"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
-<fullyQualifiedTypeName name="java.io.Reader"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
-<fullyQualifiedTypeName name="com.lsw.biz.util.SqlSessionFactoryBean"/>
-<fullyQualifiedTypeName name="com.lsw.biz.board.BoardVO"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.mybatis.spring.support.SqlSessionDaoSupport"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
 <fullyQualifiedTypeName name="ch.qos.logback.core.net.SyslogOutputStream"/>
 <fullyQualifiedTypeName name="com.lsw.biz.board.impl.BoardDAOMybatis"/>
 <fullyQualifiedTypeName name="org.mybatis.spring.SqlSessionTemplate"/>
 <fullyQualifiedTypeName name="com.lsw.biz.board.impl.BoardDAO"/>
+<fullyQualifiedTypeName name="java.io.Reader"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+<fullyQualifiedTypeName name="com.lsw.biz.util.SqlSessionFactoryBean"/>
+<fullyQualifiedTypeName name="com.lsw.biz.board.BoardVO"/>
 </qualifiedTypeNameHistroy>

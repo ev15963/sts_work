@@ -128,6 +128,8 @@
 			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\admin\Downloads\springSecuritySample1.zip"/>
+			<item value="C:\Users\admin\Downloads\SpringSessionAttributeDemo.zip"/>
 			<item value="C:\Users\admin\Downloads\11pro.zip"/>
 			<item value="C:\Users\admin\Downloads\1029.zip"/>
 			<item value="C:\Users\admin\Downloads\BoardWeb_SpringMVC_search.zip"/>
