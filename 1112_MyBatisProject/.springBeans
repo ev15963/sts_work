@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.8.4.201703310634-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/main/webapp/WEB-INF/config/presentation-layer.xml</config>
+		<config>src/main/webapp/WEB-INF/web.xml</config>
+		<config>java:org.springframework.scheduling.annotation.AbstractAsyncConfiguration</config>
+		<config>java:org.springframework.cache.annotation.AbstractCachingConfiguration</config>
+		<config>java:org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration</config>
+		<config>java:org.springframework.context.annotation.Configuration</config>
+		<config>java:org.springframework.stereotype.Controller</config>
+		<config>java:org.springframework.context.annotation.EnableAspectJAutoProxy</config>
+		<config>java:org.springframework.scheduling.annotation.EnableAsync</config>
+		<config>java:org.springframework.cache.annotation.EnableCaching</config>
+		<config>java:org.springframework.context.annotation.EnableLoadTimeWeaving</config>
+		<config>java:org.springframework.context.annotation.EnableMBeanExport</config>
+		<config>java:org.springframework.scheduling.annotation.EnableScheduling</config>
+		<config>java:org.springframework.transaction.annotation.EnableTransactionManagement</config>
+		<config>java:org.springframework.context.annotation.LoadTimeWeavingConfiguration</config>
+		<config>java:org.springframework.context.annotation.MBeanExportConfiguration</config>
+		<config>java:org.springframework.scheduling.annotation.ProxyAsyncConfiguration</config>
+		<config>java:org.springframework.cache.annotation.ProxyCachingConfiguration</config>
+		<config>java:org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration</config>
+		<config>java:org.springframework.stereotype.Repository</config>
+		<config>java:org.springframework.scheduling.annotation.SchedulingConfiguration</config>
+		<config>java:org.springframework.stereotype.Service</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>
