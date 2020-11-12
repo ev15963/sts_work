@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="1111_springSecuritySample1"/>
+<aop-project name="1027_BoardWeb_Spring_Mybatis_DynamicSQL"/>
 <aop-project name="1021_BoardWeb_SpringMVC_search2"/>
+<aop-project name="1026_MyBatisProject"/>
 <aop-project name="BoardWeb_SpringMVC_search"/>
 <aop-project name="1021_BoardWeb_SpringMVC_search"/>
 <aop-project name="Nov_project"/>

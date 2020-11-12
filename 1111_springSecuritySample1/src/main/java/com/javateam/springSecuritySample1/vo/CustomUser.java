@@ -32,6 +32,11 @@ public class CustomUser implements UserDetails {
 		this.password = users.getPassword();
 		this.enabled = users.getEnabled()==1 ?  true : false;
 	}
+
+	public void setAuthorities(List<Role> roles) {
+		// TODO Auto-generated method stub
+		
+	}
     
     /*public String getUsername() {
         return username;
