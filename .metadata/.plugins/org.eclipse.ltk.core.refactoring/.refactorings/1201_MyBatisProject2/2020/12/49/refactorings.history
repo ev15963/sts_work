@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.freeflux.biz.util.SqlMapConfig&apos; to &apos;SqlMapperInter&apos;&#x0D;&#x0A;- Original project: &apos;1201_MyBatisProject2&apos;&#x0D;&#x0A;- Original element: &apos;com.freeflux.biz.util.SqlMapConfig&apos;&#x0D;&#x0A;- Renamed element: &apos;com.freeflux.biz.util.SqlMapperInter&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SqlMapConfig&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.freeflux.biz.util{SqlMapConfig.java[SqlMapConfig" matchStrategy="1" name="SqlMapperInter" qualified="false" references="true" similarDeclarations="false" stamp="1606812577364" textual="false" version="1.0"/>
+</session>

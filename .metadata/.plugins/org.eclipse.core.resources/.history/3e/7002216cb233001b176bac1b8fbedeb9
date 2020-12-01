@@ -1,0 +1,5 @@
+package com.freeflux.biz.util;
+
+public class SqlMapperInter {
+
+}

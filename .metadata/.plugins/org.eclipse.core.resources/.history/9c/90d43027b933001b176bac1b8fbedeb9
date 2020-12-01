@@ -14,16 +14,6 @@ public class SqlSessionFactoryBean {
 			if (sessionFactory == null) {
 				Reader reader = Resources.getResourceAsReader("sql-map-config.xml");
 				sessionFactory = new SqlSessionFactoryBuilder().build(reader);
-				
-//				//SqlMapperInter 연결
-//				Class[] mapper = {
-//						SqlMapperInter.class
-//				};
-//				
-//				//mapper 등록
-//				for(Class m : mapper) {
-//					SqlSession.get
-//				}
 			}
 		} catch (Exception e) {
 			System.out.println("sql-map-config : "+ e);

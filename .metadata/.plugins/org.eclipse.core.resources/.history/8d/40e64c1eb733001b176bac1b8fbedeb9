@@ -1,0 +1,6 @@
+package com.freeflux.biz.util;
+
+public interface SqlMapperInter {
+	
+	@Select
+}
