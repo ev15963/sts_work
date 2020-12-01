@@ -12,14 +12,14 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="unit"/>
+			<item value="lonmbok"/>
+			<item value="Category"/>
+			<item value="lombok"/>
 			<item value="datasource"/>
 			<item value="insert"/>
 			<item value="version"/>
-			<item value="lombok"/>
 			<item value="spring-boot-starter-test"/>
-			<item value="lombok "/>
-			<item value="ajax"/>
-			<item value="matches"/>
 		</list>
 		<list key="replacehistory">
 			<item value="mybatis"/>

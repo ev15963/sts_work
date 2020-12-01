@@ -2,8 +2,10 @@
 <aop-reference-model>
 <aop-project name="1112_MyBatisProject"/>
 <aop-project name="1021_BoardWeb_SpringMVC_search2"/>
+<aop-project name="BoardWeb"/>
 <aop-project name="BoardWeb_SpringMVC_search"/>
 <aop-project name="1021_BoardWeb_SpringMVC_search"/>
-<aop-project name="1021_BoardWeb_SpringMVC_integration"/>
 <aop-project name="Nov_project"/>
+<aop-project name="1021_BoardWeb_SpringMVC_integration"/>
+<aop-project name="1112_springprojectJunit"/>
 </aop-reference-model>
