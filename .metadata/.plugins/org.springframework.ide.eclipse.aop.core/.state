@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="1112_MyBatisProject"/>
+<aop-project name="1201_MVCproject"/>
 <aop-project name="1021_BoardWeb_SpringMVC_search2"/>
 <aop-project name="BoardWeb"/>
 <aop-project name="BoardWeb_SpringMVC_search"/>
 <aop-project name="1021_BoardWeb_SpringMVC_search"/>
+<aop-project name="1201_MyBatisProject2"/>
 <aop-project name="Nov_project"/>
 <aop-project name="1021_BoardWeb_SpringMVC_integration"/>
-<aop-project name="1112_springprojectJunit"/>
+<aop-project name="SpringMVC"/>
 </aop-reference-model>
